@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="dist/shadstrap.min.css">
     </head>
 
-    <body>
+    <body class="pb-5">
 
         <div class="container">
             <h1>Typography</h1>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4">
                     <h1>Form</h1>
 
                     <div class="form">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-xl-4">
                     <h1>Cards</h1>
 
                     <!-- Default card -->
@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-xl-4">
                     <h1>Alerts</h1>
 
                     <!-- Default alert -->
@@ -221,76 +221,128 @@
                 </tfoot>
             </table>
 
-            <h1>Dialog</h1>
+            <div class="row">
+                <div class="col-xl-6">
+                    <h1>Dialog</h1>
 
-            <!-- Dialog trigger -->
-            <div class="flex">
-                <button class="btn btn-secondary" data-ss-toggle="dialog" data-ss-target="#defaultDialog">Open Dialog</button>
+                    <!-- Dialog trigger -->
+                    <div class="flex">
+                        <button class="btn btn-secondary" data-ss-toggle="dialog" data-ss-target="#defaultDialog">Open Dialog</button>
 
-                <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#largeDialog">Open Large Dialog</button>
+                        <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#largeDialog">Open Large Dialog</button>
 
-                <button class="btn btn-destructive" data-ss-toggle="dialog" data-ss-target="#alertDialog">Open Alert Dialog</button>
-            </div>
+                        <button class="btn btn-destructive" data-ss-toggle="dialog" data-ss-target="#alertDialog">Open Alert Dialog</button>
+                    </div>
 
-            <!-- Dialog modal -->
-            <div id="defaultDialog" class="dialog">
-                <div class="dialog-content">
-                    <h3 class="mt-0">Hello, world!</h3>
-                    <p class="text-secondary">This a simple dialog.</p>
-                    <div class="text-end mt-3">
-                        <button class="btn" data-ss-dismiss="dialog">Close</button>
+                    <!-- Dialog modal -->
+                    <div id="defaultDialog" class="dialog">
+                        <div class="dialog-content">
+                            <h3 class="mt-0">Hello, world!</h3>
+                            <p class="text-secondary">This a simple dialog.</p>
+                            <div class="text-end mt-3">
+                                <button class="btn" data-ss-dismiss="dialog">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Large dialog modal -->
+                    <div id="largeDialog" class="dialog dialog-lg">
+                        <div class="dialog-content">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tenetur dolorem tempore deleniti omnis quia nulla laborum, quidem hic totam quam natus, illum tempora placeat distinctio praesentium voluptate quos voluptates.</p>
+                            <div class="text-end mt-3">
+                                <button class="btn" data-ss-dismiss="dialog">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alert dialog modal -->
+                    <div id="alertDialog" class="dialog dialog-alert">
+                        <div class="dialog-content">
+                            <h3 class="mt-0">Are you sure?</h3>
+                            <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside.</p>
+                            <div class="flex justify-content-end mt-3">
+                                <button class="btn btn-outline" data-ss-dismiss="dialog">Cancel</button>
+                                <button class="btn" data-ss-dismiss="dialog">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1>Accordion</h1>
+
+                    <div class="accordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <!-- Trigger -->
+                            <button class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item1">
+                                Item 1
+                            </button>
+
+                            <!-- Content -->
+                            <div class="accordion-content" id="item1">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <!-- Trigger -->
+                            <button class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item2">
+                                Item 2
+                            </button>
+
+                            <!-- Content -->
+                            <div class="accordion-content" id="item2">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Large dialog modal -->
-            <div id="largeDialog" class="dialog dialog-lg">
-                <div class="dialog-content">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tenetur dolorem tempore deleniti omnis quia nulla laborum, quidem hic totam quam natus, illum tempora placeat distinctio praesentium voluptate quos voluptates.</p>
-                    <div class="text-end mt-3">
-                        <button class="btn" data-ss-dismiss="dialog">Close</button>
+                <div class="col-xl-6">
+                    <h1>Sheet</h1>
+
+                    <!-- Sheet trigger -->
+                    <div class="flex">
+                        <button class="btn btn-outline" data-ss-toggle="sheet" data-ss-target="#defaultSheet">Open Sheet</button>
+
+                        <button class="btn btn-secondary" data-ss-toggle="sheet" data-ss-target="#largeSheet">Open Large Sheet</button>
                     </div>
-                </div>
-            </div>
 
-            <!-- Alert dialog modal -->
-            <div id="alertDialog" class="dialog dialog-alert">
-                <div class="dialog-content">
-                    <h3 class="mt-0">Are you sure?</h3>
-                    <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside.</p>
-                    <div class="flex justify-content-end mt-3">
-                        <button class="btn btn-outline" data-ss-dismiss="dialog">Cancel</button>
-                        <button class="btn" data-ss-dismiss="dialog">Continue</button>
+                    <!-- Sheet modal -->
+                    <div id="defaultSheet" class="sheet">
+                        <div class="sheet-content">
+                            <h3>This is a sheet.</h3>
+                            <p>You can close it if you want.</p>
+                            <button class="btn mt-3" data-ss-dismiss="sheet">Close</button>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <h1>Accordion</h1>
-
-            <div class="accordion">
-                <!-- Item 1 -->
-                <div class="accordion-item">
-                    <!-- Trigger -->
-                    <a href="" class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item1">
-                        Item 1
-                    </a>
-
-                    <!-- Content -->
-                    <div class="accordion-content" id="item1">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
+                    <!-- Large sheet modal -->
+                    <div id="largeSheet" class="sheet sheet-lg">
+                        <div class="sheet-content">
+                            <h3>This is a laaaaarge sheet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam dicta deleniti, ex hic eveniet rem eius minus id soluta voluptatum non reprehenderit nemo. Repudiandae accusantium sapiente cupiditate suscipit nisi?</p>
+                            <button class="btn mt-3" data-ss-dismiss="sheet">Close</button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Item 2 -->
-                <div class="accordion-item">
-                    <!-- Trigger -->
-                    <a href="" class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item2">
-                        Item 2
-                    </a>
+                    <h1>Tabs</h1>
 
-                    <!-- Content -->
-                    <div class="accordion-content" id="item2">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
+                    <div class="tabs">
+                        <div class="tab-trigger">
+                            <button data-ss-toggle="tab" data-ss-target="#tab1" class="active">Tab 1</button>
+                            <button data-ss-toggle="tab" data-ss-target="#tab2">Tab 2</button>
+                        </div>
+                        <div class="tab-content show" id="tab1">
+                            <div class="card">
+                                <p>This is the tab 1 content.</p>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab2">
+                            <div class="card">
+                                <p>This is the tab 2 content.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

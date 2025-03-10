@@ -1,0 +1,62 @@
+@use 'mixins' as *;
+
+.sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in;
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+
+        .sheet-backdrop {
+            opacity: 1;
+        }
+
+        .sheet-content {
+            transform: translateX(0) !important;
+        }
+    }
+
+    .sheet-content {
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        padding: 1.5rem;
+        background-color: hsl(var(--background));
+        border-left-width: 1px;
+        position: fixed;
+        right: 0;
+        z-index: 51;
+        top: 0;
+        height: 100%;
+        transition: transform 0.5s ease-in;
+        width: 100%;
+        transform: translateX(510px);
+        max-width: 500px;
+        overflow-y: auto;
+    }
+
+    &.sheet-lg {
+        .sheet-content {
+            max-width: 900px;
+            transform: translateX(910px);
+        }
+    }
+
+    .sheet-backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.25s ease-in;
+    }
+}
