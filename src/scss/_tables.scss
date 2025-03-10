@@ -1,0 +1,38 @@
+@use 'mixins' as *;
+
+.table {
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+
+    th,
+    td {
+        text-align: left;
+        font-weight: 500;
+        vertical-align: middle;
+        padding: 0.5rem;
+    }
+
+    tr {
+        border-bottom-width: 1px;
+        @include transitionColors();
+
+        &:hover {
+            background-color: hsl(var(--muted) / 0.5);
+        }
+    }
+
+    tfoot {
+        background-color: hsl(var(--muted) / 0.5);
+        border-top-width: 1px;
+    }
+
+    thead {
+        border-bottom-width: 1px;
+
+        th {
+            color: hsl(var(--muted-foreground));
+        }
+    }
+}

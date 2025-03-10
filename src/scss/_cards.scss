@@ -1,0 +1,8 @@
+.card {
+    padding: 1.25rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    color: hsl(var(--card-foreground));
+    background-color: hsl(var(--card));
+    border-width: 1px;
+    border-radius: calc(var(--radius) + 4px);
+}

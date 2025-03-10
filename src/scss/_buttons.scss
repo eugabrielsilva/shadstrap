@@ -1,0 +1,84 @@
+@use 'mixins' as *;
+
+.btn {
+    color: hsl(var(--primary-foreground));
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: hsl(var(--primary));
+    border-radius: calc(var(--radius) - 2px);
+    white-space: nowrap;
+    display: inline-flex;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: none;
+    @include transitionColors();
+    height: 2.25rem;
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: hsl(var(--primary) / 0.9);
+    }
+
+    &.btn-secondary {
+        background-color: hsl(var(--secondary));
+        color: hsl(var(--secondary-foreground));
+
+        &:hover {
+            background-color: hsl(var(--secondary) / 0.8);
+        }
+    }
+
+    &.btn-destructive {
+        background-color: hsl(var(--destructive));
+        color: hsl(var(--destructive-foreground));
+
+        &:hover {
+            background-color: hsl(var(--destructive) / 0.9);
+        }
+    }
+
+    &.btn-outline {
+        background-color: hsl(var(--background));
+        border-color: hsl(var(--input));
+        border-width: 1px;
+        color: hsl(var(--foreground));
+
+        &:hover {
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+    }
+
+    &.btn-ghost {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+
+        &:hover {
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+    }
+
+    &.btn-link {
+        background-color: hsl(var(--background));
+        text-underline-offset: 4px;
+        color: hsl(var(--foreground));
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

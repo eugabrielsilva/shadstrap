@@ -1,0 +1,47 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+    border-color: hsl(var(--border));
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    font-family: 'Geist';
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    appearance: none;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
