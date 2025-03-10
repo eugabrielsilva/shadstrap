@@ -1,0 +1,46 @@
+@use 'mixins' as *;
+
+.accordion {
+    .accordion-item {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-align: left;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: hsl(var(--foreground));
+        border-bottom-width: 1px;
+
+        .accordion-toggle {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            text-decoration: none;
+            color: hsl(var(--foreground));
+
+            &:after {
+                @include icon('\f078');
+                transition-duration: 0.2s;
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                color: hsl(var(--muted-foreground));
+            }
+
+            &.open {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .accordion-content {
+            display: none;
+
+            &.show {
+                display: block;
+                padding-top: 1rem;
+            }
+        }
+    }
+}

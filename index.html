@@ -12,14 +12,18 @@
 
         <div class="container">
             <h1>Typography</h1>
+
             <h2>Heading 2</h2>
+
             <h3>Heading 3</h3>
+
             <h4>Heading 4</h4>
+
             <h5>Heading 5</h5>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis voluptatum? Possimus eveniet accusamus qui, vitae quibusdam culpa rerum quod delectus omnis soluta, perferendis natus ullam quos quisquam voluptas fugit!</p>
+            <p>Paragraph: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis voluptatum? Possimus eveniet accusamus qui, vitae quibusdam culpa rerum quod delectus omnis soluta, perferendis natus ullam quos quisquam voluptas fugit!</p>
 
-            <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere fugit dolores ut modi impedit. Aperiam, sit incidunt! Debitis modi sed quidem id eos quam rem doloribus alias unde atque!</p>
+            <p class="text-secondary">Paragraph secondary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere fugit dolores ut modi impedit. Aperiam, sit incidunt! Debitis modi sed quidem id eos quam rem doloribus alias unde atque!</p>
 
             <h1>Flex</h1>
 
@@ -34,12 +38,19 @@
 
             <div class="flex">
                 <button class="btn">Button</button>
+
                 <button class="btn btn-secondary">Secondary</button>
+
                 <button class="btn btn-destructive">Destructive</button>
+
                 <button class="btn btn-outline">Outline</button>
+
                 <button class="btn btn-ghost">Ghost</button>
+
                 <a href="" class="btn btn-link">Link</a>
+
                 <button class="btn" disabled>Disabled</button>
+
                 <button class="btn">
                     <i class="far fa-envelope-open"></i>
                     With Icon
@@ -49,28 +60,40 @@
             <div class="row">
                 <div class="col-4">
                     <h1>Form</h1>
+
+                    <!-- Input -->
                     <label>Input</label>
                     <input type="text" placeholder="Type something">
+
+                    <!-- Select -->
                     <label>Select</label>
                     <select>
                         <option value="">Select an option</option>
                         <option>Option 1</option>
                     </select>
+
+                    <!-- Checkbox -->
                     <label>Checkbox</label>
                     <div class="checkbox">
                         <input type="checkbox" id="check1">
                         <label for="check1">Select this checkbox</label>
                     </div>
+
+                    <!-- Radio buttons -->
                     <div class="checkbox">
                         <input type="radio" id="radio1">
                         <label for="radio1">Select this radio</label>
                     </div>
+
+                    <!-- Textarea -->
                     <label>Textarea</label>
                     <textarea rows="4" placeholder="Type here"></textarea>
                 </div>
 
                 <div class="col-4">
                     <h1>Cards</h1>
+
+                    <!-- Default card -->
                     <div class="card">
                         <p><strong>Hello, there.</strong></p>
                         <p class="text-secondary">This is my first card.</p>
@@ -83,6 +106,8 @@
 
                 <div class="col-4">
                     <h1>Alerts</h1>
+
+                    <!-- Default alert -->
                     <div class="alert">
                         <div class="alert-icon">
                             <i class="fas fa-check"></i>
@@ -92,6 +117,8 @@
                             <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur facere ut omnis voluptatibus.</p>
                         </div>
                     </div>
+
+                    <!-- Alert destructive -->
                     <div class="alert alert-destructive mt-3">
                         <div class="alert-icon">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -147,14 +174,46 @@
 
             <h1>Dialog</h1>
 
-            <button class="btn btn-outline" data-toggle="dialog" data-target="#myDialog">Open Dialog</button>
+            <!-- Dialog trigger -->
+            <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#myDialog">Open Dialog</button>
 
+            <!-- Dialog modal -->
             <div id="myDialog" class="dialog">
                 <div class="dialog-backdrop"></div>
                 <div class="dialog-content">
                     This a dialog.
                     <div class="text-end mt-3">
-                        <button class="btn" data-dismiss="dialog">Close</button>
+                        <button class="btn" data-ss-dismiss="dialog">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Accordion</h1>
+
+            <div class="accordion">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <!-- Trigger -->
+                    <a href="" class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item1">
+                        Item 1
+                    </a>
+
+                    <!-- Content -->
+                    <div class="accordion-content" id="item1">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <!-- Trigger -->
+                    <a href="" class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item2">
+                        Item 2
+                    </a>
+
+                    <!-- Content -->
+                    <div class="accordion-content" id="item2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem neque eveniet accusamus accusantium. Quam, aliquid voluptates quibusdam vero esse omnis praesentium magnam adipisci corrupti velit quos impedit sunt! Nostrum.
                     </div>
                 </div>
             </div>

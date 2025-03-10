@@ -61,9 +61,7 @@ input[type='radio'] {
         background-color: hsl(var(--primary));
 
         &:after {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 700;
+            @include icon('\f00c');
             position: absolute;
             color: hsl(var(--background));
             font-size: 0.75rem;
