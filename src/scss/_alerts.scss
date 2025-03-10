@@ -12,15 +12,12 @@
     gap: 1rem;
 
     .alert-icon {
-        --tw-space-y-reverse: 0;
         margin-top: calc(0.375rem * (1 - var(--tw-space-y-reverse)));
         font-size: 1.1rem;
     }
 
     &.alert-destructive {
-        --tw-border-opacity: 1;
         border-color: hsl(var(--destructive) / var(--tw-border-opacity));
-        --tw-text-opacity: 1;
         color: hsl(var(--destructive) / var(--tw-text-opacity));
 
         .text-secondary {

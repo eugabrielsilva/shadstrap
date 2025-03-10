@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
         <title>Shadstrap Demo</title>
         <link rel="stylesheet" href="dist/shadstrap.min.css">
     </head>
@@ -66,6 +67,10 @@
                         <label>Input</label>
                         <input type="text" placeholder="Type something">
 
+                        <!-- Disabled Input -->
+                        <label>Disabled input</label>
+                        <input type="text" disabled placeholder="You can't type here...">
+
                         <!-- Select -->
                         <label>Select</label>
                         <select>
@@ -82,7 +87,13 @@
                             <label for="check1">Select this checkbox</label>
                         </div>
 
+                        <div class="checkbox">
+                            <input type="checkbox" disabled id="check2">
+                            <label for="check2">This one is disabled, sorry!</label>
+                        </div>
+
                         <!-- Radio buttons -->
+                        <label>Radio</label>
                         <div class="checkbox">
                             <input type="radio" id="radio1" name="radios">
                             <label for="radio1">Select this radio</label>
@@ -99,6 +110,10 @@
                         <!-- File input -->
                         <label>Select a file</label>
                         <input type="file">
+
+                        <!-- Date input -->
+                        <label>Select the date</label>
+                        <input type="date">
                     </div>
                 </div>
 
@@ -135,6 +150,23 @@
                         <a href="">Components</a>
                         <a href="">Breadcrumb</a>
                     </div>
+
+                    <h1>Progress</h1>
+
+                    <div class="progress">
+                        <div class="progress-status" style="width: 50%;"></div>
+                    </div>
+
+                    <h1>Separator</h1>
+                    <div class="d-flex justify-content-between">
+                        <div>Item 1</div>
+                        <div class="separator-vertical"></div>
+                        <div>Item 2</div>
+                    </div>
+                    <div class="separator"></div>
+                    <div>Item 3</div>
+                    <div class="separator"></div>
+                    <div>Item 4</div>
                 </div>
 
                 <div class="col-xl-4">
@@ -329,15 +361,20 @@
                     <h1>Tabs</h1>
 
                     <div class="tabs">
+                        <!-- Tab trigger -->
                         <div class="tab-trigger">
                             <button data-ss-toggle="tab" data-ss-target="#tab1" class="active">Tab 1</button>
                             <button data-ss-toggle="tab" data-ss-target="#tab2">Tab 2</button>
                         </div>
+
+                        <!-- Tab 1 content -->
                         <div class="tab-content show" id="tab1">
                             <div class="card">
                                 <p>This is the tab 1 content.</p>
                             </div>
                         </div>
+
+                        <!-- Tab 2 content -->
                         <div class="tab-content" id="tab2">
                             <div class="card">
                                 <p>This is the tab 2 content.</p>
@@ -346,6 +383,10 @@
                     </div>
                 </div>
             </div>
+
+            <p class="text-secondary">
+                2025, Developed by <a href="https://gabrielsilva.dev.br" target="_blank">Gabriel Silva</a>.
+            </p>
         </div>
 
         <script src="dist/shadstrap.min.js"></script>

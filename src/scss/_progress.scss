@@ -1,0 +1,14 @@
+.progress {
+    background-color: hsl(var(--primary) / .2);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+    height: .5rem;
+    width: 100%;
+
+    .progress-status {
+        background-color: hsl(var(--primary));
+        height: 100%;
+        width: 100%;
+    }
+}
