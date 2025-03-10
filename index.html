@@ -61,33 +61,45 @@
                 <div class="col-4">
                     <h1>Form</h1>
 
-                    <!-- Input -->
-                    <label>Input</label>
-                    <input type="text" placeholder="Type something">
+                    <div class="form">
+                        <!-- Input -->
+                        <label>Input</label>
+                        <input type="text" placeholder="Type something">
 
-                    <!-- Select -->
-                    <label>Select</label>
-                    <select>
-                        <option value="">Select an option</option>
-                        <option>Option 1</option>
-                    </select>
+                        <!-- Select -->
+                        <label>Select</label>
+                        <select>
+                            <option value="">Select an option</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
 
-                    <!-- Checkbox -->
-                    <label>Checkbox</label>
-                    <div class="checkbox">
-                        <input type="checkbox" id="check1">
-                        <label for="check1">Select this checkbox</label>
+                        <!-- Checkbox -->
+                        <label>Checkbox</label>
+                        <div class="checkbox">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Select this checkbox</label>
+                        </div>
+
+                        <!-- Radio buttons -->
+                        <div class="checkbox">
+                            <input type="radio" id="radio1" name="radios">
+                            <label for="radio1">Select this radio</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="radio" id="radio2" name="radios">
+                            <label for="radio2">Or select this radio</label>
+                        </div>
+
+                        <!-- Textarea -->
+                        <label>Textarea</label>
+                        <textarea rows="4" placeholder="Type here"></textarea>
+
+                        <!-- File input -->
+                        <label>Select a file</label>
+                        <input type="file">
                     </div>
-
-                    <!-- Radio buttons -->
-                    <div class="checkbox">
-                        <input type="radio" id="radio1">
-                        <label for="radio1">Select this radio</label>
-                    </div>
-
-                    <!-- Textarea -->
-                    <label>Textarea</label>
-                    <textarea rows="4" placeholder="Type here"></textarea>
                 </div>
 
                 <div class="col-4">
@@ -97,10 +109,31 @@
                     <div class="card">
                         <p><strong>Hello, there.</strong></p>
                         <p class="text-secondary">This is my first card.</p>
-                        <div class="flex justify-content-between mt-4">
+                        <div class="flex justify-content-end mt-4">
                             <button class="btn btn-outline">Cancel</button>
                             <button class="btn">Submit</button>
                         </div>
+                    </div>
+
+                    <h1>Badges</h1>
+
+                    <div class="flex">
+                        <div class="badge">Default</div>
+
+                        <div class="badge badge-secondary">Secondary</div>
+
+                        <div class="badge badge-outline">Outline</div>
+
+                        <div class="badge badge-destructive">Destructive</div>
+                    </div>
+
+                    <h1>Breadcrumbs</h1>
+
+                    <div class="breadcrumb">
+                        <a href="">Home</a>
+                        <a href="">...</a>
+                        <a href="">Components</a>
+                        <a href="">Breadcrumb</a>
                     </div>
                 </div>
 
@@ -127,6 +160,22 @@
                             <p><strong>Error</strong></p>
                             <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur facere ut omnis voluptatibus.</p>
                         </div>
+                    </div>
+
+                    <h1>Pagination</h1>
+                    <div class="pagination">
+                        <a href="">
+                            <i class="fas fa-chevron-left"></i>
+                            Previous
+                        </a>
+                        <a href="">1</a>
+                        <a href="" class="active">2</a>
+                        <a href="">3</a>
+                        <a href="">...</a>
+                        <a href="">
+                            Next
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -175,15 +224,43 @@
             <h1>Dialog</h1>
 
             <!-- Dialog trigger -->
-            <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#myDialog">Open Dialog</button>
+            <div class="flex">
+                <button class="btn btn-secondary" data-ss-toggle="dialog" data-ss-target="#defaultDialog">Open Dialog</button>
+
+                <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#largeDialog">Open Large Dialog</button>
+
+                <button class="btn btn-destructive" data-ss-toggle="dialog" data-ss-target="#alertDialog">Open Alert Dialog</button>
+            </div>
 
             <!-- Dialog modal -->
-            <div id="myDialog" class="dialog">
-                <div class="dialog-backdrop"></div>
+            <div id="defaultDialog" class="dialog">
                 <div class="dialog-content">
-                    This a dialog.
+                    <h3 class="mt-0">Hello, world!</h3>
+                    <p class="text-secondary">This a simple dialog.</p>
                     <div class="text-end mt-3">
                         <button class="btn" data-ss-dismiss="dialog">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Large dialog modal -->
+            <div id="largeDialog" class="dialog dialog-lg">
+                <div class="dialog-content">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tenetur dolorem tempore deleniti omnis quia nulla laborum, quidem hic totam quam natus, illum tempora placeat distinctio praesentium voluptate quos voluptates.</p>
+                    <div class="text-end mt-3">
+                        <button class="btn" data-ss-dismiss="dialog">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert dialog modal -->
+            <div id="alertDialog" class="dialog dialog-alert">
+                <div class="dialog-content">
+                    <h3 class="mt-0">Are you sure?</h3>
+                    <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside.</p>
+                    <div class="flex justify-content-end mt-3">
+                        <button class="btn btn-outline" data-ss-dismiss="dialog">Cancel</button>
+                        <button class="btn" data-ss-dismiss="dialog">Continue</button>
                     </div>
                 </div>
             </div>

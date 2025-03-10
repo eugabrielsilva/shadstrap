@@ -1,0 +1,58 @@
+@use 'mixins' as *;
+
+.badge {
+    @include transitionColors();
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    border-color: transparent;
+    background-color: hsl(var(--primary));
+    display: inline-flex;
+    border-radius: calc(var(--radius) - 2px);
+    border-width: 1px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:hover {
+        background-color: hsl(var(--primary) / 0.9);
+    }
+
+    &.badge-secondary {
+        background-color: hsl(var(--secondary));
+        color: hsl(var(--secondary-foreground));
+
+        &:hover {
+            background-color: hsl(var(--secondary) / 0.8);
+        }
+    }
+
+    &.badge-destructive {
+        background-color: hsl(var(--destructive));
+        color: hsl(var(--destructive-foreground));
+
+        &:hover {
+            background-color: hsl(var(--destructive) / 0.9);
+        }
+    }
+
+    &.badge-outline {
+        background-color: hsl(var(--background));
+        border-color: hsl(var(--input));
+        border-width: 1px;
+        color: hsl(var(--foreground));
+
+        &:hover {
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+    }
+}

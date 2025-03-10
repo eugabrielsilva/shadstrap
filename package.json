@@ -1,5 +1,12 @@
 {
-  "dependencies": {
+  "name": "shadstrap",
+  "version": "0.0.1",
+  "description": "A CSS theme based on shadcn/ui look, with the benefits of Bootstrap utilities and FontAwesome icons.",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriel Silva"
+  },
+  "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",

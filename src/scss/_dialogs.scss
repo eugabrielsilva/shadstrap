@@ -36,6 +36,12 @@
         transition: opacity 0.25s ease-in-out;
     }
 
+    &.dialog-alert {
+        .dialog-backdrop {
+            pointer-events: none;
+        }
+    }
+
     .dialog-content {
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -51,5 +57,11 @@
         transition:
             transform 0.25s ease-out,
             opacity 0.25s ease-out;
+    }
+
+    &.dialog-lg {
+        .dialog-content {
+            max-width: 1200px;
+        }
     }
 }

@@ -1,0 +1,44 @@
+@use 'mixins' as *;
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    overflow-wrap: break-word;
+    align-items: center;
+
+    a {
+        color: hsl(var(--muted-foreground));
+        display: inline-flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        gap: .375rem;
+        @include transitionColors();
+
+        &:after {
+            @include icon('\f054');
+            margin-left: .625rem;
+            margin-right: .625rem;
+            font-size: .625rem;
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        &:last-of-type {
+            color: hsl(var(--foreground));
+            pointer-events: none;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: hsl(var(--foreground));
+        }
+    }
+}
