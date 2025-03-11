@@ -38,4 +38,10 @@
     --tw-border-opacity: 1;
     --tw-text-opacity: 1;
     --tw-space-x-reverse: 0;
+    --bs-primary: hsl(var(--primary));
+    --bs-primary-rgb: rgb(--bs-primary);
+    --bs-secondary: hsl(var(--secondary));
+    --bs-secondary-rgb: rgb(--bs-secondary);
+    --bs-danger: hsl(var(--destructive));
+    --bs-danger-rgb: rgb(--bs-danger);
 }

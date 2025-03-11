@@ -5,4 +5,31 @@
 
 A CSS theme based on [shadcn/ui](https://github.com/shadcn-ui/ui) look, with the benefits of [Bootstrap](https://github.com/twbs/bootstrap) utilities and [FontAwesome](https://github.com/FortAwesome/Font-Awesome) icons.
 
-### This package is currently under development and it's not ready to use in production yet.
+### Components
+
+Check the demo: [https://eugabrielsilva.github.io/shadstrap](https://eugabrielsilva.github.io/shadstrap)
+
+### Available Bootstrap Classes
+
+- Entire grid system (cols, responsive, container, flex, etc)
+- Utility classes (margin, padding, text, display, position, etc)
+
+### Icons
+
+All icons from [FontAwesome 6 Free](https://fontawesome.com/v6/search?ic=free) pack.
+
+### Installation
+
+Download the latest release files to your project folder.
+
+Put inside the `<head>` tag:
+
+```html
+<link rel="stylesheet" href="/path/to/dist/shadstrap.min.css" />
+```
+
+Put before the closing `</body>` tag:
+
+```html
+<script src="/path/to/dist/shadstrap.min.js"></script>
+```
