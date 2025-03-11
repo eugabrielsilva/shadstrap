@@ -5,4 +5,20 @@
     background-color: hsl(var(--card));
     border-width: 1px;
     border-radius: calc(var(--radius) + 4px);
+
+    &.card-sm {
+        max-width: 400px;
+    }
+
+    &.card-md {
+        max-width: 600px;
+    }
+
+    &.card-lg {
+        max-width: 700px;
+    }
+
+    &.card-xl {
+        max-width: 1200px;
+    }
 }
