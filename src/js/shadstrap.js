@@ -114,4 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Dropdown triggers
+    document.querySelectorAll('[data-ss-toggle="dropdown"]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            if(targetEl) {
+                targetEl.classList.toggle('show');
+            }
+        })
+    });
 });

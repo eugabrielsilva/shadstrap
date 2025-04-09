@@ -1,0 +1,55 @@
+@use 'mixins' as *;
+
+.dropdown {
+    position: relative;
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: hsl(var(--popover));
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        border-width: 1px;
+        color: hsl(var(--popover-foreground));
+        border-radius: calc(var(--radius) - 2px);
+        min-width: 8rem;
+        width: 14rem;
+        padding: .25rem;
+        z-index: 50;
+        transform: translateY(10px) scale(0.95);
+        transform-origin: top left;
+        opacity: 0;
+        transition:
+            transform 0.25s ease-out,
+            opacity 0.25s ease-out;
+        pointer-events: none;
+
+        &.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+
+        a {
+            display: flex;
+            width: 100%;
+            font-size: .875rem;
+            line-height: 1.25rem;
+            padding-top: .375rem;
+            text-decoration: none;
+            padding-bottom: .375rem;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            border-radius: calc(var(--radius) - 4px);
+            gap: .5rem;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                color: hsl(var(--accent-foreground));
+                background-color: hsl(var(--accent));
+                @include transitionColors();
+            }
+        }
+    }
+}
