@@ -6,7 +6,10 @@ const cleanCSS = require('gulp-clean-css');
 const watch = require('gulp-watch');
 
 function scripts() {
-    return gulp.src('src/js/*.js')
+    return gulp.src([
+        'src/js/globals.js',
+        'src/js/dom.js'
+    ])
         .pipe(concat('shadstrap.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
