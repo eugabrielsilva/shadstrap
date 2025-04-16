@@ -1,0 +1,12 @@
+.skeleton {
+    .skeleton-item {
+        animation: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+        background-color: hsl(var(--primary) / .1);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+}

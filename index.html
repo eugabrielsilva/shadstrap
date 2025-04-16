@@ -399,20 +399,48 @@
                 <div class="col-xl-6 mt-4">
                     <h1>Dropdown</h1>
 
-                    <div class="dropdown">
-                        <button data-ss-toggle="dropdown" data-ss-target="#myDropdown" class="btn btn-primary">Open Dropdown</button>
-                        <div class="dropdown-menu" id="myDropdown">
-                            <a href="">Dropdown Item 1</a>
-                            <a href="">Dropdown Item 2</a>
-                            <a href="">Dropdown Item 3</a>
-                            <a href="">Dropdown Item 4</a>
+                    <div class="flex">
+                        <!-- Default position -->
+                        <div class="dropdown">
+                            <button data-ss-toggle="dropdown" data-ss-target="#myDropdown" class="btn btn-primary">Open Dropdown (default)</button>
+                            <div class="dropdown-menu" id="myDropdown">
+                                <a href="">Dropdown Item 1</a>
+                                <a href="">Dropdown Item 2</a>
+                                <a href="">Dropdown Item 3</a>
+                                <a href="">Dropdown Item 4</a>
+                            </div>
+                        </div>
+
+                        <!-- Top position -->
+                        <div class="dropdown">
+                            <button data-ss-toggle="dropdown" data-ss-target="#myDropdown2" class="btn btn-primary">Open Dropdown (top)</button>
+                            <div class="dropdown-menu top" id="myDropdown2">
+                                <a href="">Dropdown Item 1</a>
+                                <a href="">Dropdown Item 2</a>
+                                <a href="">Dropdown Item 3</a>
+                                <a href="">Dropdown Item 4</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 mt-4">
+                    <h1>Skeleton</h1>
+
+                    <div class="skeleton">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="skeleton-item rounded-circle" style="height: 60px; width: 60px;"></div>
+                            <div class="flex-grow-1">
+                                <div class="skeleton-item rounded-pill mb-2" style="height: 20px;"></div>
+                                <div class="skeleton-item rounded-pill w-75" style="height: 18px;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <p class="text-secondary mt-5">
-                2025, Developed by <a href="https://gabrielsilva.dev.br" target="_blank">Gabriel Silva</a>.
+            <p class="text-secondary mt-4">
+                (c) 2025, Developed by <a href="https://gabrielsilva.dev.br" target="_blank">Gabriel Silva</a>.
             </p>
         </div>
 
