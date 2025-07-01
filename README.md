@@ -20,6 +20,22 @@ All icons from [FontAwesome 6 Free](https://fontawesome.com/v6/search?ic=free) p
 
 ### Installation
 
+#### GitHub CDN
+
+Put inside the `<head>` tag:
+
+```html
+<link rel="stylesheet" href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css">
+```
+
+Put before the closing `</body>` tag:
+
+```html
+<script src="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.js"></script>
+```
+
+#### Manually
+
 Download the latest release files to your project folder.
 
 Put inside the `<head>` tag:

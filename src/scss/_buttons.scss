@@ -51,7 +51,7 @@
     }
 
     &.btn-outline {
-        background-color: hsl(var(--background));
+        background-color: transparent;
         border-color: hsl(var(--input));
         border-width: 1px;
         color: hsl(var(--foreground));
@@ -63,7 +63,8 @@
     }
 
     &.btn-ghost {
-        background-color: hsl(var(--background));
+        background-color: transparent;
+        box-shadow: none;
         color: hsl(var(--foreground));
 
         &:hover {
@@ -73,7 +74,8 @@
     }
 
     &.btn-link {
-        background-color: hsl(var(--background));
+        background-color: transparent;
+        box-shadow: none;
         text-underline-offset: 4px;
         color: hsl(var(--foreground));
 

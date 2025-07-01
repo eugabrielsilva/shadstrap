@@ -43,7 +43,7 @@
     }
 
     &.badge-outline {
-        background-color: hsl(var(--background));
+        background-color: transparent;
         border-color: hsl(var(--input));
         border-width: 1px;
         color: hsl(var(--foreground));

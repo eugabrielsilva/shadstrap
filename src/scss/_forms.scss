@@ -44,7 +44,7 @@
             cursor: pointer;
 
             &::file-selector-button {
-                background: hsl(var(--background));
+                background: transparent;
                 color: hsl(var(--foreground));
                 appearance: none;
                 border: none;
@@ -63,10 +63,35 @@
         }
     }
 
+    .form-description {
+        color: hsl(var(--muted-foreground));
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
+        display: block;
+        margin-top: -0.5rem;
+        margin-bottom: 1rem;
+    }
+
     textarea {
         height: auto;
         min-height: 2.25rem;
         resize: vertical;
+    }
+
+    .select {
+        position: relative;
+
+        &:after {
+            @include icon('\f078');
+            position: absolute;
+            top: 1rem;
+            right: .75rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        select {
+            padding-right: 2.2rem;
+        }
     }
 
     select {
@@ -149,7 +174,7 @@
         width: 1rem;
         height: 1rem;
         cursor: pointer;
-        background: hsl(var(--background));
+        background: transparent;
         position: relative;
 
         &:focus {

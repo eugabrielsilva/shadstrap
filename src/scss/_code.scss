@@ -1,0 +1,34 @@
+.code {
+    display: flex;
+    align-items: flex-start;
+    gap: .7rem;
+    padding: .5rem;
+    border-radius: calc(var(--radius) + 4px);
+    background-color: #18181b;
+    font-family: "Geist Mono", monospace;
+    max-width: 100%;
+
+    .btn-copy {
+        background-color: #18181b;
+        color: var(--bs-gray-400);
+        box-shadow: none;
+        padding: .7rem;
+
+        &:hover {
+            background-color: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+    }
+
+    code {
+        padding: 0.7rem;
+        flex: 1;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &.no-wrap {
+            white-space: nowrap;
+            text-wrap: nowrap;
+        }
+    }
+}

@@ -72,4 +72,6 @@
     --bs-warning: var(--bs-orange);
     --bs-light: var(--bs-white);
     --bs-dark: var(--bs-black);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
 }

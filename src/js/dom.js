@@ -88,4 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     });
+
+    // Copy code buttons
+    document.querySelectorAll('[data-ss-toggle="copy"]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            if(targetEl) {
+                navigator.clipboard.writeText(targetEl.innerHTML);
+                el.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => {
+                    el.innerHTML = '<i class="far fa-clipboard"></i>';
+                }, 2000);
+            }
+        });
+    });
 });

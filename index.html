@@ -67,18 +67,25 @@
                         <label>Input</label>
                         <input type="text" placeholder="Type something">
 
+                        <!-- Input with description -->
+                        <label>Input with description</label>
+                        <input type="text" placeholder="Type something">
+                        <span class="form-description">This is a simple description for the input.</span>
+
                         <!-- Disabled Input -->
                         <label>Disabled input</label>
                         <input type="text" disabled placeholder="You can't type here...">
 
                         <!-- Select -->
                         <label>Select</label>
-                        <select>
-                            <option value="">Select an option</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                        </select>
+                        <div class="select">
+                            <select>
+                                <option value="">Select an option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
 
                         <!-- Checkbox -->
                         <label>Checkbox</label>
@@ -166,6 +173,14 @@
 
                     <div class="progress">
                         <div class="progress-status" style="width: 50%;"></div>
+                    </div>
+
+                    <h1 class="mt-5">Code block</h1>
+                    <div class="code">
+                        <code id="code1">npm install shadstrap</code>
+                        <button class="btn btn-copy" data-ss-toggle="copy" data-ss-target="#code1">
+                            <i class="far fa-clipboard"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -440,7 +455,7 @@
             </div>
 
             <p class="text-secondary mt-4">
-                (c) 2025, Developed by <a href="https://gabrielsilva.dev.br" target="_blank">Gabriel Silva</a>.
+                &copy; 2025, Developed by <a href="https://github.com/eugabrielsilva/shadstrap" target="_blank">Gabriel Silva</a>.
             </p>
         </div>
 
