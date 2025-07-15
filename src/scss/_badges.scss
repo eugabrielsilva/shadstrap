@@ -24,7 +24,8 @@
         background-color: hsl(var(--primary) / 0.9);
     }
 
-    &.badge-secondary {
+    &.badge-secondary,
+    &.badge-muted {
         background-color: hsl(var(--secondary));
         color: hsl(var(--secondary-foreground));
 
@@ -33,12 +34,23 @@
         }
     }
 
-    &.badge-destructive {
+    &.badge-destructive,
+    &.badge-danger {
         background-color: hsl(var(--destructive));
         color: hsl(var(--destructive-foreground));
 
         &:hover {
             background-color: hsl(var(--destructive) / 0.9);
+        }
+    }
+
+    &.badge-blue {
+        transition: opacity 0.15s;
+        background-color: var(--bs-blue);
+        color: hsl(var(--foreground));
+
+        &:hover {
+            opacity: 0.9;
         }
     }
 

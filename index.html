@@ -26,6 +26,10 @@
 
             <p class="text-secondary">Paragraph secondary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere fugit dolores ut modi impedit. Aperiam, sit incidunt! Debitis modi sed quidem id eos quam rem doloribus alias unde atque!</p>
 
+            <p class="text-success">Paragraph success: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nobis animi distinctio, repudiandae perferendis assumenda reprehenderit inventore nemo temporibus. Voluptates odit ut doloremque nostrum neque sit fuga, quo iusto laudantium?</p>
+
+            <p class="text-destructive">Paragraph destructive: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos facere dicta sint inventore blanditiis et! Ducimus obcaecati aperiam fuga recusandae temporibus nihil minus, quidem sit incidunt adipisci alias atque!</p>
+
             <h1 class="mt-5">Flex</h1>
 
             <div class="flex">
@@ -48,7 +52,7 @@
 
                 <button class="btn btn-ghost">Ghost</button>
 
-                <a href="" class="btn btn-link">Link</a>
+                <a href="#" class="btn btn-link">Link</a>
 
                 <button class="btn" disabled>Disabled</button>
 
@@ -158,15 +162,20 @@
                         <div class="badge badge-outline">Outline</div>
 
                         <div class="badge badge-destructive">Destructive</div>
+                        
+                        <div class="badge badge-blue">
+                            <i class="fas fa-check-circle"></i>
+                            Blue With Icon
+                        </div>
                     </div>
 
                     <h1 class="mt-5">Breadcrumbs</h1>
 
                     <div class="breadcrumb">
-                        <a href="">Home</a>
-                        <a href="">...</a>
-                        <a href="">Components</a>
-                        <a href="">Breadcrumb</a>
+                        <a href="#">Home</a>
+                        <a href="#">...</a>
+                        <a href="#">Components</a>
+                        <a href="#">Breadcrumb</a>
                     </div>
 
                     <h1 class="mt-5">Progress</h1>
@@ -181,6 +190,22 @@
                         <button class="btn btn-copy" data-ss-toggle="copy" data-ss-target="#code1">
                             <i class="far fa-clipboard"></i>
                         </button>
+                    </div>
+
+                    <h1 class="mt-5">Avatar stack</h1>
+                    <div class="avatars">
+                        <div class="avatar">
+                            <img src="https://github.com/eugabrielsilva.png">
+                            <div class="avatar-fallback">GS</div>
+                        </div>
+                        <div class="avatar">
+                            <img src="https://github.com/shadcn.png">
+                            <div class="avatar-fallback">CN</div>
+                        </div>
+                        <div class="avatar">
+                            <img src="https://github.com/torvalds.png">
+                            <div class="avatar-fallback">LT</div>
+                        </div>
                     </div>
                 </div>
 
@@ -211,15 +236,15 @@
 
                     <h1 class="mt-5">Pagination</h1>
                     <div class="pagination">
-                        <a href="">
+                        <a href="#">
                             <i class="fas fa-chevron-left"></i>
                             Previous
                         </a>
-                        <a href="">1</a>
-                        <a href="" class="active">2</a>
-                        <a href="">3</a>
-                        <a href="">...</a>
-                        <a href="">
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">...</a>
+                        <a href="#">
                             Next
                             <i class="fas fa-chevron-right"></i>
                         </a>
@@ -419,10 +444,10 @@
                         <div class="dropdown">
                             <button data-ss-toggle="dropdown" data-ss-target="#myDropdown" class="btn btn-primary">Open Dropdown (default)</button>
                             <div class="dropdown-menu" id="myDropdown">
-                                <a href="">Dropdown Item 1</a>
-                                <a href="">Dropdown Item 2</a>
-                                <a href="">Dropdown Item 3</a>
-                                <a href="">Dropdown Item 4</a>
+                                <a href="#">Dropdown Item 1</a>
+                                <a href="#">Dropdown Item 2</a>
+                                <a href="#">Dropdown Item 3</a>
+                                <a href="#">Dropdown Item 4</a>
                             </div>
                         </div>
 
@@ -430,10 +455,10 @@
                         <div class="dropdown">
                             <button data-ss-toggle="dropdown" data-ss-target="#myDropdown2" class="btn btn-primary">Open Dropdown (top)</button>
                             <div class="dropdown-menu top" id="myDropdown2">
-                                <a href="">Dropdown Item 1</a>
-                                <a href="">Dropdown Item 2</a>
-                                <a href="">Dropdown Item 3</a>
-                                <a href="">Dropdown Item 4</a>
+                                <a href="#">Dropdown Item 1</a>
+                                <a href="#">Dropdown Item 2</a>
+                                <a href="#">Dropdown Item 3</a>
+                                <a href="#">Dropdown Item 4</a>
                             </div>
                         </div>
                     </div>
@@ -455,7 +480,7 @@
             </div>
 
             <p class="text-secondary mt-4">
-                &copy; 2025, Developed by <a href="https://github.com/eugabrielsilva/shadstrap" target="_blank">Gabriel Silva</a>.
+                &copy; 2025, Developed by <i class="fab fa-github me-1"></i> <a href="https://github.com/eugabrielsilva/shadstrap" target="_blank">Gabriel Silva</a>.
             </p>
         </div>
 

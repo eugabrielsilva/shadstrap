@@ -1,6 +1,13 @@
 // Global methods
 window.shadstrap = {
 
+    // Close all dropdowns
+    closeDropdowns() {
+        document.querySelectorAll('.dropdown-menu.show').forEach(el => {
+            el.classList.remove('show');
+        });
+    },
+
     // Open dialog
     showDialog(selector, targetEl = null) {
         if(!targetEl && selector) targetEl = document.querySelector(selector);
@@ -46,14 +53,18 @@ window.shadstrap = {
         backdrop.addEventListener('click', (e) => {
             e.preventDefault();
             targetEl.classList.remove('show');
+            backdrop.classList.remove('show');
             setTimeout(() => {
                 backdrop.remove();
-            }, 500);
+            }, 250);
             document.body.classList.remove('no-scroll');
         });
         targetEl.appendChild(backdrop);
         targetEl.classList.add('show');
         document.body.classList.add('no-scroll');
+        setTimeout(() => {
+            backdrop.classList.add('show');
+        }, 0);
     },
 
     // Close sheet
@@ -64,9 +75,10 @@ window.shadstrap = {
         targetEl.classList.remove('show');
         const backdrop = targetEl.querySelector('.sheet-backdrop');
         if(backdrop) {
+            backdrop.classList.remove('show');
             setTimeout(() => {
                 backdrop.remove();
-            }, 500);
+            }, 250);
         }
         document.body.classList.remove('no-scroll');
     }

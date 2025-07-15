@@ -84,9 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
             if(targetEl) {
+                if(!targetEl.classList.contains('show')) {
+                    window.shadstrap.closeDropdowns();
+                }
                 targetEl.classList.toggle('show');
             }
         })
+    });
+
+    // Close dropdowns by clicking outside
+    document.addEventListener('click', e => {
+        const isDropdown = e.target.closest('.dropdown');
+        const isToggle = e.target.closest('[data-ss-toggle="dropdown"]');
+        if(!isDropdown && !isToggle) {
+            window.shadstrap.closeDropdowns();
+        }
     });
 
     // Copy code buttons

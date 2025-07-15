@@ -32,7 +32,8 @@
         background-color: hsl(var(--primary) / 0.9);
     }
 
-    &.btn-secondary {
+    &.btn-secondary,
+    &.btn-muted {
         background-color: hsl(var(--secondary));
         color: hsl(var(--secondary-foreground));
 
@@ -41,7 +42,8 @@
         }
     }
 
-    &.btn-destructive {
+    &.btn-destructive,
+    &.btn-danger {
         background-color: hsl(var(--destructive));
         color: hsl(var(--destructive-foreground));
 

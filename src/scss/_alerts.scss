@@ -16,7 +16,8 @@
         font-size: 1.1rem;
     }
 
-    &.alert-destructive {
+    &.alert-destructive,
+    &.alert-danger {
         border-color: hsl(var(--destructive) / var(--tw-border-opacity));
         color: hsl(var(--destructive) / var(--tw-text-opacity));
 

@@ -1,0 +1,41 @@
+.avatars {
+    display: flex;
+    flex-wrap: wrap;
+
+    .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        margin-left: -10px;
+        position: relative;
+        overflow: hidden;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        img,
+        .avatar-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: hsl(var(--muted));
+            font-size: 1rem;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

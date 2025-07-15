@@ -2,12 +2,22 @@
     color: hsl(var(--foreground)) !important;
 }
 
-.text-secondary {
+.text-secondary,
+.text-muted {
     color: hsl(var(--muted-foreground)) !important;
 }
 
-.text-destructive {
+.text-destructive,
+.text-danger {
     color: hsl(var(--destructive)) !important;
+}
+
+.text-success {
+    color: var(--bs-success) !important;
+}
+
+.text-warning {
+    color: var(--bs-warning) !important;
 }
 
 p {
