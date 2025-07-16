@@ -6,7 +6,7 @@
         font-weight: 500;
     }
 
-    input:not([type='checkbox'], [type='radio']),
+    input:not([type='checkbox'], [type='radio'], [type='range']),
     select,
     textarea {
         height: 2.25rem;
@@ -216,6 +216,25 @@
                     transform: translate(-50%, -50%);
                 }
             }
+        }
+    }
+
+    input[type='range'] {
+        --slider-value: 50%;
+        width: 100%;
+        background: linear-gradient(to right, hsl(var(--primary)) var(--slider-value), hsl(var(--muted)) var(--slider-value));
+        height: 8px;
+        border-radius: 4px;
+        outline: none;
+
+        &::-webkit-slider-thumb {
+            width: 1rem;
+            height: 1rem;
+            background-color: hsl(var(--border));
+            border-radius: 50%;
+            border: 1px solid hsl(var(--foreground));
+            cursor: pointer;
+            appearance: none;
         }
     }
 }

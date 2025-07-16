@@ -115,4 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Slider ranges
+    document.querySelectorAll('.form input[type="range"]').forEach(el => {
+        el.addEventListener('input', () => {
+            const min = parseFloat(el.min || 0);
+            const max = parseFloat(el.max || 100);
+            const value = parseFloat(el.value);
+            const percent = (max === min) ? 0 : ((value - min) / (max - min)) * 100;
+            el.style.setProperty('--slider-value', `${percent}%`);
+        });
+    });
 });

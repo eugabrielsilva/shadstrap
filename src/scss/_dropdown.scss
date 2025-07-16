@@ -62,6 +62,15 @@
             }
         }
 
+        .dropdown-separator {
+            margin-inline: calc(var(--spacing) * -1);
+            margin-block: calc(var(--spacing) * 1);
+            border-color: hsl(var(--border));
+            height: 0;
+            color: inherit;
+            border-top-width: 1px;
+        }
+
         a {
             display: flex;
             width: 100%;
