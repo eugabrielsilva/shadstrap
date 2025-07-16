@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Dialog trigger buttons
-    document.querySelectorAll('[data-ss-toggle="dialog"]').forEach(el => {
+    document.querySelectorAll('[data-ss-dialog]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const selector = el.getAttribute('data-ss-target');
+            const selector = el.getAttribute('data-ss-dialog');
             if(selector) {
                 window.shadstrap.showDialog(selector);
             }
@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Accordion triggers
-    document.querySelectorAll('[data-ss-toggle="accordion"]').forEach(el => {
+    document.querySelectorAll('[data-ss-accordion]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            const targetEl = document.querySelector(el.getAttribute('data-ss-accordion'));
             if(targetEl) {
                 targetEl.classList.toggle('show');
                 el.classList.toggle('open');
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Sheet trigger buttons
-    document.querySelectorAll('[data-ss-toggle="sheet"]').forEach(el => {
+    document.querySelectorAll('[data-ss-sheet]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const selector = el.getAttribute('data-ss-target');
+            const selector = el.getAttribute('data-ss-sheet');
             if(selector) {
                 window.shadstrap.openSheet(selector);
             }
@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Tab toggler buttons
-    document.querySelectorAll('[data-ss-toggle="tab"]').forEach(el => {
+    document.querySelectorAll('[data-ss-tab]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            const targetEl = document.querySelector(el.getAttribute('data-ss-tab'));
             if(targetEl) {
                 const parentEl = el.closest('.tabs');
                 if(parentEl) {
@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Dropdown triggers
-    document.querySelectorAll('[data-ss-toggle="dropdown"]').forEach(el => {
+    document.querySelectorAll('[data-ss-dropdown]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            const targetEl = document.querySelector(el.getAttribute('data-ss-dropdown'));
             if(targetEl) {
                 if(!targetEl.classList.contains('show')) {
                     window.shadstrap.closeDropdowns();
@@ -95,17 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close dropdowns by clicking outside
     document.addEventListener('click', e => {
         const isDropdown = e.target.closest('.dropdown');
-        const isToggle = e.target.closest('[data-ss-toggle="dropdown"]');
+        const isToggle = e.target.closest('[data-ss-dropdown]');
         if(!isDropdown && !isToggle) {
             window.shadstrap.closeDropdowns();
         }
     });
 
     // Copy code buttons
-    document.querySelectorAll('[data-ss-toggle="copy"]').forEach(el => {
+    document.querySelectorAll('[data-ss-copy]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetEl = document.querySelector(el.getAttribute('data-ss-target'));
+            const targetEl = document.querySelector(el.getAttribute('data-ss-copy'));
             if(targetEl) {
                 navigator.clipboard.writeText(targetEl.innerHTML);
                 el.innerHTML = '<i class="fas fa-check"></i>';
@@ -124,6 +124,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const value = parseFloat(el.value);
             const percent = (max === min) ? 0 : ((value - min) / (max - min)) * 100;
             el.style.setProperty('--slider-value', `${percent}%`);
+        });
+    });
+
+    // Tooltips
+    document.querySelectorAll('[data-ss-tooltip]').forEach(el => {
+        const placement = el.getAttribute('data-ss-placement') || 'top';
+        const tooltip = document.createElement('div');
+        tooltip.className = `tooltip tooltip-${placement}`;
+        tooltip.innerText = el.getAttribute('data-ss-tooltip');
+        el.appendChild(tooltip);
+
+        el.addEventListener('mouseover', () => {
+            tooltip.classList.add('show');
+        });
+
+        el.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('show');
         });
     });
 });

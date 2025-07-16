@@ -1,0 +1,73 @@
+.tooltip {
+    position: absolute;
+    left: 50%;
+    transform: scale(0.95) translateX(-50%);
+    transform-origin: left;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    pointer-events: none;
+    opacity: 0;
+    transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: calc(0.625rem - 2px);
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    max-width: 300px;
+    width: max-content;
+    text-wrap: wrap;
+    text-align: left;
+    font-family: 'Geist';
+    font-weight: 500;
+
+    &.show {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    &.tooltip-top {
+        bottom: 100%;
+        left: 50%;
+        transform-origin: bottom center;
+
+        &.show {
+            bottom: calc(100% + var(--tooltip-offset));
+        }
+    }
+
+    &.tooltip-bottom {
+        top: 100%;
+        left: 50%;
+        transform-origin: top center;
+
+        &.show {
+            top: calc(100% + var(--tooltip-offset));
+        }
+    }
+
+    &.tooltip-left {
+        right: 100%;
+        top: 50%;
+        left: auto;
+        transform: scale(0.95) translateY(-50%);
+        transform-origin: right center;
+
+        &.show {
+            right: calc(100% + var(--tooltip-offset));
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    &.tooltip-right {
+        left: 100%;
+        top: 50%;
+        transform: scale(0.95) translateY(-50%);
+        transform-origin: left center;
+
+        &.show {
+            left: calc(100% + var(--tooltip-offset));
+            transform: translateY(-50%) scale(1);
+        }
+    }
+}

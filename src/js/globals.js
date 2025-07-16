@@ -3,7 +3,7 @@ window.shadstrap = {
 
     // Close all dropdowns
     closeDropdowns() {
-        document.querySelectorAll('.dropdown-menu.show').forEach(el => {
+        document.querySelectorAll('.dropdown .dropdown-menu.show').forEach(el => {
             el.classList.remove('show');
         });
     },

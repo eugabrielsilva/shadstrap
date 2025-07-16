@@ -196,7 +196,7 @@
                     <h1 class="mt-5">Code block</h1>
                     <div class="code">
                         <code id="code1">npm install shadstrap</code>
-                        <button class="btn btn-copy" data-ss-toggle="copy" data-ss-target="#code1">
+                        <button class="btn btn-copy" data-ss-copy="#code1">
                             <i class="far fa-clipboard"></i>
                         </button>
                     </div>
@@ -204,16 +204,20 @@
                     <h1 class="mt-5">Avatar stack</h1>
                     <div class="avatars">
                         <div class="avatar">
-                            <img src="https://github.com/eugabrielsilva.png">
-                            <div class="avatar-fallback">GS</div>
+                            <img src="https://github.com/twbs.png">
+                            <div class="avatar-fallback">BS</div>
+                        </div>
+                        <div class="avatar">
+                            <img src="https://github.com/FortAwesome.png">
+                            <div class="avatar-fallback">FA</div>
                         </div>
                         <div class="avatar">
                             <img src="https://github.com/shadcn.png">
                             <div class="avatar-fallback">CN</div>
                         </div>
                         <div class="avatar">
-                            <img src="https://github.com/torvalds.png">
-                            <div class="avatar-fallback">LT</div>
+                            <img src="https://github.com/eugabrielsilva.png">
+                            <div class="avatar-fallback">GS</div>
                         </div>
                     </div>
                 </div>
@@ -269,6 +273,14 @@
                     <div>Item 3</div>
                     <hr class="separator">
                     <div>Item 4</div>
+
+                    <h1 class="mt-5">Tooltip</h1>
+                    <div class="flex">
+                        <button class="btn btn-outline" data-ss-tooltip="Hello there">On Top</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Hello there" data-ss-placement="bottom">On Bottom</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Hello there" data-ss-placement="left">On Left</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Hello there" data-ss-placement="right">On Right</button>
+                    </div>
                 </div>
             </div>
 
@@ -319,11 +331,11 @@
 
                     <!-- Dialog trigger -->
                     <div class="flex">
-                        <button class="btn btn-secondary" data-ss-toggle="dialog" data-ss-target="#defaultDialog">Open Dialog</button>
+                        <button class="btn btn-outline" data-ss-dialog="#defaultDialog">Open Dialog</button>
 
-                        <button class="btn btn-outline" data-ss-toggle="dialog" data-ss-target="#largeDialog">Open Large Dialog</button>
+                        <button class="btn btn-outline" data-ss-dialog="#largeDialog">Open Large Dialog</button>
 
-                        <button class="btn btn-destructive" data-ss-toggle="dialog" data-ss-target="#alertDialog">Open Alert Dialog</button>
+                        <button class="btn btn-outline" data-ss-dialog="#alertDialog">Open Alert Dialog</button>
                     </div>
 
                     <!-- Dialog modal -->
@@ -365,7 +377,7 @@
                         <!-- Item 1 -->
                         <div class="accordion-item">
                             <!-- Trigger -->
-                            <button class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item1">
+                            <button class="accordion-toggle" data-ss-accordion="#item1">
                                 Item 1
                             </button>
 
@@ -378,7 +390,7 @@
                         <!-- Item 2 -->
                         <div class="accordion-item">
                             <!-- Trigger -->
-                            <button class="accordion-toggle" data-ss-toggle="accordion" data-ss-target="#item2">
+                            <button class="accordion-toggle" data-ss-accordion="#item2">
                                 Item 2
                             </button>
 
@@ -395,9 +407,9 @@
 
                     <!-- Sheet trigger -->
                     <div class="flex">
-                        <button class="btn btn-outline" data-ss-toggle="sheet" data-ss-target="#defaultSheet">Open Sheet</button>
+                        <button class="btn btn-secondary" data-ss-sheet="#defaultSheet">Open Sheet</button>
 
-                        <button class="btn btn-secondary" data-ss-toggle="sheet" data-ss-target="#largeSheet">Open Large Sheet</button>
+                        <button class="btn btn-secondary" data-ss-sheet="#largeSheet">Open Large Sheet</button>
                     </div>
 
                     <!-- Sheet modal -->
@@ -423,8 +435,8 @@
                     <div class="tabs">
                         <!-- Tab trigger -->
                         <div class="tab-trigger">
-                            <button data-ss-toggle="tab" data-ss-target="#tab1" class="active">Tab 1</button>
-                            <button data-ss-toggle="tab" data-ss-target="#tab2">Tab 2</button>
+                            <button data-ss-tab="#tab1" class="active">Tab 1</button>
+                            <button data-ss-tab="#tab2">Tab 2</button>
                         </div>
 
                         <!-- Tab 1 content -->
@@ -451,7 +463,7 @@
                     <div class="flex">
                         <!-- Default position -->
                         <div class="dropdown">
-                            <button data-ss-toggle="dropdown" data-ss-target="#myDropdown" class="btn btn-primary">Open Dropdown (default)</button>
+                            <button data-ss-dropdown="#myDropdown" class="btn">Open Dropdown (default)</button>
                             <div class="dropdown-menu" id="myDropdown">
                                 <a href="#">Dropdown Item 1</a>
                                 <a href="#">Dropdown Item 2</a>
@@ -465,7 +477,7 @@
 
                         <!-- Top position -->
                         <div class="dropdown">
-                            <button data-ss-toggle="dropdown" data-ss-target="#myDropdown2" class="btn btn-primary">Open Dropdown (top)</button>
+                            <button data-ss-dropdown="#myDropdown2" class="btn">Open Dropdown (top)</button>
                             <div class="dropdown-menu top" id="myDropdown2">
                                 <a href="#">Dropdown Item 1</a>
                                 <a href="#">Dropdown Item 2</a>
