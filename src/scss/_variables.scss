@@ -76,4 +76,10 @@
     --bs-dark: var(--bs-black);
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
+    --tracking-tighter: -.05em;
+    --tracking-tight: -.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: .025em;
+    --tracking-wider: .05em;
+    --tracking-widest: .1em;
 }

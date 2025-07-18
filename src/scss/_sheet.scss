@@ -9,14 +9,6 @@
     z-index: 50;
     pointer-events: none;
 
-    &.show {
-        pointer-events: all;
-
-        .sheet-content {
-            transform: translateX(0) !important;
-        }
-    }
-
     .sheet-content {
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
         --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -31,7 +23,7 @@
         height: 100%;
         transition: transform 0.4s ease-in;
         width: 100%;
-        transform: translateX(510px);
+        transform: translateX(100%);
         max-width: 500px;
         overflow-y: auto;
     }
@@ -39,12 +31,12 @@
     &.sheet-lg {
         .sheet-content {
             max-width: 900px;
-            transform: translateX(910px);
         }
     }
 
     .sheet-backdrop {
         background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(2px);
         width: 100%;
         height: 100%;
         position: absolute;
@@ -55,6 +47,14 @@
 
         &.show {
             opacity: 1;
+        }
+    }
+
+    &.show {
+        pointer-events: all;
+
+        .sheet-content {
+            transform: translateX(0);
         }
     }
 }

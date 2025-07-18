@@ -1,0 +1,74 @@
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 50;
+    pointer-events: none;
+
+    .drawer-content {
+        padding: calc(var(--spacing) * 4);
+        padding-top: 0;
+        background-color: hsl(var(--background));
+        position: fixed;
+        will-change: transform;
+        z-index: 51;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        user-select: none;
+        border-top-width: 1px;
+        border-top-left-radius: var(--radius);
+        border-top-right-radius: var(--radius);
+        max-height: 80dvh;
+        align-items: center;
+        justify-content: center;
+        margin-top: calc(var(--spacing) * 24);
+        display: flex;
+        text-align: center;
+        flex-flow: column;
+        height: auto;
+        transform: translateY(var(--drawer-transform, 100%)) translateY(var(--drag-translate, 0));
+        transition: transform 0.5s cubic-bezier(.32, .72, 0, 1);
+
+        .drawer-handle {
+            display: block;
+            background-color: hsl(var(--muted));
+            border-radius: 40px;
+            flex-shrink: 0;
+            height: 8px;
+            margin-top: calc(var(--spacing) * 4);
+            margin-inline: auto;
+            width: 100px;
+        }
+
+        &.dragging {
+            transition: none !important;
+        }
+    }
+
+    .drawer-backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease-in;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    &.show {
+        pointer-events: all;
+
+        .drawer-content {
+            --drawer-transform: 0;
+        }
+    }
+}

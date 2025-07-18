@@ -143,4 +143,72 @@ document.addEventListener('DOMContentLoaded', () => {
             tooltip.classList.remove('show');
         });
     });
+
+    // Drawer trigger buttons
+    document.querySelectorAll('[data-ss-drawer]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selector = el.getAttribute('data-ss-drawer');
+            if(selector) {
+                window.shadstrap.openDrawer(selector);
+            }
+        });
+    });
+
+    // Drawer close buttons
+    document.querySelectorAll('[data-ss-dismiss="drawer"]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetEl = el.closest('.drawer');
+            if(targetEl) {
+                window.shadstrap.closeDrawer(null, targetEl);
+            }
+        });
+    });
+
+    // Drawer drag events
+    document.querySelectorAll('.drawer').forEach(el => {
+        const drawerContent = el.querySelector('.drawer-content');
+        if(drawerContent) {
+            let startY = 0;
+            let currentY = 0;
+            let dragging = false;
+
+            const onTouchStart = (e) => {
+                dragging = true;
+                drawerContent.classList.add('dragging');
+                startY = e.touches ? e.touches[0].clientY : e.clientY;
+            };
+
+            const onTouchMove = (e) => {
+                if(!dragging) return;
+                currentY = e.touches ? e.touches[0].clientY : e.clientY;
+                let deltaY = currentY - startY;
+                if(deltaY < 0) {
+                    const resistance = Math.abs(deltaY) / 300;
+                    deltaY = -Math.pow(resistance, 0.8) * 60;
+                }
+                drawerContent.style.setProperty('--drag-translate', `${deltaY}px`);
+            };
+
+            const onTouchEnd = () => {
+                if(!dragging) return;
+                const deltaY = currentY - startY;
+                dragging = false;
+                if(deltaY > 100) {
+                    window.shadstrap.closeDrawer(null, el);
+                }
+                drawerContent.classList.remove('dragging');
+                drawerContent.style.setProperty('--drag-translate', `0px`);
+            };
+
+            drawerContent.addEventListener('mousedown', onTouchStart);
+            drawerContent.addEventListener('mousemove', onTouchMove);
+            drawerContent.addEventListener('mouseup', onTouchEnd);
+            drawerContent.addEventListener('mouseleave', onTouchEnd);
+            drawerContent.addEventListener('touchstart', onTouchStart);
+            drawerContent.addEventListener('touchmove', onTouchMove);
+            drawerContent.addEventListener('touchend', onTouchEnd);
+        }
+    });
 });

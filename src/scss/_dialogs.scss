@@ -29,6 +29,7 @@
 
     .dialog-backdrop {
         background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(2px);
         width: 100%;
         height: 100%;
         position: absolute;
