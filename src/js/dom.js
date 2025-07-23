@@ -211,4 +211,26 @@ document.addEventListener('DOMContentLoaded', () => {
             drawerContent.addEventListener('touchend', onTouchEnd);
         }
     });
+
+    // Sidebar backdrops
+    document.querySelectorAll('.sidebar-wrapper').forEach(el => {
+        const backdrop = document.createElement('div');
+        backdrop.className = 'sidebar-backdrop';
+        backdrop.addEventListener('click', e => {
+            e.preventDefault();
+            window.shadstrap.toggleSidebar(null, el);
+        });
+        el.appendChild(backdrop);
+    });
+
+    // Sidebar togglers
+    document.querySelectorAll('[data-ss-sidebar]').forEach(el => {
+        el.addEventListener('click', e => {
+            e.preventDefault();
+            const selector = el.getAttribute('data-ss-sidebar');
+            if(selector) {
+                window.shadstrap.toggleSidebar(selector);
+            }
+        });
+    });
 });

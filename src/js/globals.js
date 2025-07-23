@@ -123,4 +123,10 @@ window.shadstrap = {
         document.body.classList.remove('no-scroll');
     },
 
+    // Toggle sidebar
+    toggleSidebar(selector, targetEl = null) {
+        if(!targetEl && selector) targetEl = document.querySelector(selector);
+        if(!targetEl) throw new Error(`${selector} element was not found`);
+        targetEl.classList.toggle('show');
+    },
 }

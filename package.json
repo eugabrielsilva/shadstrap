@@ -1,6 +1,6 @@
 {
   "name": "shadstrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A CSS theme based on shadcn/ui look, with the benefits of Bootstrap utilities and FontAwesome icons.",
   "license": "MIT",
   "author": {

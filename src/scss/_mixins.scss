@@ -1,11 +1,11 @@
 @mixin transitionColors() {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--ease);
     transition-duration: 0.15s;
 }
 
 @mixin icon($code) {
     content: $code;
-    font-family: 'Font Awesome 6 Free';
+    font-family: 'Font Awesome 7 Free';
     font-weight: 700;
 }

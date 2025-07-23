@@ -145,7 +145,7 @@
 
         &:after {
             transition-property: transform;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: var(--ease);
             transition-duration: 0.15s;
             @include icon('\f111');
             position: absolute;

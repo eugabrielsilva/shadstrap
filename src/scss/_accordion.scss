@@ -25,7 +25,7 @@
                 @include icon('\f078');
                 transition-duration: 0.2s;
                 transition-property: transform;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-timing-function: var(--ease);
                 color: hsl(var(--muted-foreground));
             }
 

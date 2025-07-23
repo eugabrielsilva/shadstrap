@@ -30,7 +30,7 @@
         flex-flow: column;
         height: auto;
         transform: translateY(var(--drawer-transform, 100%)) translateY(var(--drag-translate, 0));
-        transition: transform 0.5s cubic-bezier(.32, .72, 0, 1);
+        transition: transform 0.5s var(--ease);
 
         .drawer-handle {
             display: block;

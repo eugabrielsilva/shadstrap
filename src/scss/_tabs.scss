@@ -28,7 +28,7 @@
             align-items: center;
             cursor: pointer;
             transition-property: all;
-            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-timing-function: var(--ease);
             transition-duration: .15s;
             flex: 1;
 
