@@ -35,7 +35,8 @@
             color: hsl(var(--muted-foreground));
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
@@ -113,7 +114,8 @@
         gap: 0.5rem;
         align-items: center;
 
-        input:disabled+label {
+        input:disabled+label,
+        input.disabled+label {
             opacity: 0.7;
             cursor: not-allowed;
         }
@@ -138,7 +140,8 @@
         flex-shrink: 0;
         cursor: pointer;
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
@@ -181,7 +184,8 @@
             border-color: hsl(var(--primary));
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
@@ -194,7 +198,7 @@
                     @include icon('\f00c');
                     position: absolute;
                     color: hsl(var(--background));
-                    font-size: 0.75rem;
+                    font-size: 0.6rem;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -207,13 +211,14 @@
 
             &:checked {
                 &:after {
-                    @include icon('\f111');
                     position: absolute;
-                    color: hsl(var(--primary));
-                    font-size: 0.68rem;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    background: hsl(var(--primary));
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    border-radius: 100%;
+                    transform: scale(0.6);
+                    transform-origin: center;
                 }
             }
         }
@@ -230,7 +235,7 @@
         &::-webkit-slider-thumb {
             width: 1rem;
             height: 1rem;
-            background-color: hsl(var(--border));
+            background-color: hsl(var(--background));
             border-radius: 50%;
             border: 1px solid hsl(var(--foreground));
             cursor: pointer;

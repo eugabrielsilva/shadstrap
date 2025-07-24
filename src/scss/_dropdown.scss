@@ -71,7 +71,8 @@
             border-top-width: 1px;
         }
 
-        a {
+        a,
+        button {
             display: flex;
             width: 100%;
             font-size: .875rem;
@@ -87,6 +88,12 @@
                 color: hsl(var(--accent-foreground));
                 background-color: hsl(var(--accent));
                 @include transitionColors();
+            }
+
+            &:disabled,
+            &.disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
             }
         }
     }

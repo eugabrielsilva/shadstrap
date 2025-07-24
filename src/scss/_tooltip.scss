@@ -26,7 +26,9 @@
         transform: translateX(-50%) scale(1);
     }
 
-    &.tooltip-top {
+    &.tooltip-top,
+    &.tooltip-top-left,
+    &.tooltip-top-right {
         bottom: 100%;
         left: 50%;
         transform-origin: bottom center;
@@ -34,9 +36,32 @@
         &.show {
             bottom: calc(100% + var(--tooltip-offset));
         }
+
+        &.tooltip-top-left {
+            left: 0;
+            transform-origin: bottom left;
+            transform: scale(0.95);
+
+            &.show {
+                transform: scale(1);
+            }
+        }
+
+        &.tooltip-top-right {
+            left: auto;
+            right: 0;
+            transform-origin: bottom right;
+            transform: scale(0.95);
+
+            &.show {
+                transform: scale(1);
+            }
+        }
     }
 
-    &.tooltip-bottom {
+    &.tooltip-bottom,
+    &.tooltip-bottom-left,
+    &.tooltip-bottom-right {
         top: 100%;
         left: 50%;
         transform-origin: top center;
@@ -44,9 +69,32 @@
         &.show {
             top: calc(100% + var(--tooltip-offset));
         }
+
+        &.tooltip-bottom-left {
+            left: 0;
+            transform-origin: top left;
+            transform: scale(0.95);
+
+            &.show {
+                transform: scale(1);
+            }
+        }
+
+        &.tooltip-bottom-right {
+            left: auto;
+            right: 0;
+            transform-origin: top right;
+            transform: scale(0.95);
+
+            &.show {
+                transform: scale(1);
+            }
+        }
     }
 
-    &.tooltip-left {
+    &.tooltip-left,
+    &.tooltip-left-top,
+    &.tooltip-left-bottom {
         right: 100%;
         top: 50%;
         left: auto;
@@ -57,9 +105,32 @@
             right: calc(100% + var(--tooltip-offset));
             transform: translateY(-50%) scale(1);
         }
+
+        &.tooltip-left-top {
+            top: 0;
+            transform: scale(0.95);
+            transform-origin: right top;
+
+            &.show {
+                transform: scale(1);
+            }
+        }
+
+        &.tooltip-left-bottom {
+            top: auto;
+            bottom: 0;
+            transform: scale(0.95);
+            transform-origin: right bottom;
+
+            &.show {
+                transform: scale(1);
+            }
+        }
     }
 
-    &.tooltip-right {
+    &.tooltip-right,
+    &.tooltip-right-top,
+    &.tooltip-right-bottom {
         left: 100%;
         top: 50%;
         transform: scale(0.95) translateY(-50%);
@@ -68,6 +139,27 @@
         &.show {
             left: calc(100% + var(--tooltip-offset));
             transform: translateY(-50%) scale(1);
+        }
+
+        &.tooltip-right-top {
+            top: 0;
+            transform: scale(0.95);
+            transform-origin: left top;
+
+            &.show {
+                transform: scale(1);
+            }
+        }
+
+        &.tooltip-right-bottom {
+            top: auto;
+            bottom: 0;
+            transform: scale(0.95);
+            transform-origin: left bottom;
+
+            &.show {
+                transform: scale(1);
+            }
         }
     }
 }

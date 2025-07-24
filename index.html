@@ -27,13 +27,13 @@
             <p class="text-destructive">Paragraph destructive: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos facere dicta sint inventore blanditiis et! Ducimus obcaecati aperiam fuga recusandae temporibus nihil minus, quidem sit incidunt adipisci alias atque!</p>
 
             <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam qui minus facere odio et, impedit aliquid excepturi explicabo! Neque vel voluptatibus magni odit cupiditate natus aspernatur eius, similique consectetur.</blockquote>
-            
+
             <ul>
                 <li>List item 1</li>
                 <li>List item 2</li>
                 <li>List item 3</li>
             </ul>
-            
+
             <h1 class="mt-5">Flex</h1>
 
             <div class="flex">
@@ -285,6 +285,16 @@
                         <button class="btn btn-outline" data-ss-tooltip="Hello there" data-ss-placement="left">On Left</button>
                         <button class="btn btn-outline" data-ss-tooltip="Hello there" data-ss-placement="right">On Right</button>
                     </div>
+                    <div class="flex mt-3">
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="top-left">On Top Left</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="top-right">On Top Right</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="bottom-left">On Bottom Left</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="bottom-right">On Bottom Right</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="left-top">On Left Top</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="left-bottom">On Left Bottom</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="right-top">On Right Top</button>
+                        <button class="btn btn-outline" data-ss-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ut mauris vel consectetur. Morbi velit magna, mollis ac sodales ac, pretium sed justo." data-ss-placement="right-bottom">On Right Bottom</button>
+                    </div>
                 </div>
             </div>
 
@@ -346,7 +356,7 @@
                     <div id="defaultDialog" class="dialog">
                         <div class="dialog-content">
                             <h3 class="mt-0">Hello, world!</h3>
-                            <p class="text-secondary">This a simple dialog.</p>
+                            <p class="text-secondary">This is a simple dialog. You can close it by clicking outside or in the button below.</p>
                             <div class="text-end mt-3">
                                 <button class="btn" data-ss-dismiss="dialog">Close</button>
                             </div>
@@ -370,7 +380,7 @@
                             <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside.</p>
                             <div class="flex justify-content-end mt-3">
                                 <button class="btn btn-outline" data-ss-dismiss="dialog">Cancel</button>
-                                <button class="btn" data-ss-dismiss="dialog">Continue</button>
+                                <button class="btn btn-destructive" data-ss-dismiss="dialog">Continue</button>
                             </div>
                         </div>
                     </div>
@@ -420,7 +430,7 @@
                     <div id="defaultSheet" class="sheet">
                         <div class="sheet-content">
                             <h3>This is a sheet.</h3>
-                            <p>You can close it if you want.</p>
+                            <p class="text-secondary">You can close it by clicking outside or in the button below.</p>
                             <button class="btn mt-3" data-ss-dismiss="sheet">Close</button>
                         </div>
                     </div>
@@ -429,7 +439,7 @@
                     <div id="largeSheet" class="sheet sheet-lg">
                         <div class="sheet-content">
                             <h3>This is a laaaaarge sheet.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam dicta deleniti, ex hic eveniet rem eius minus id soluta voluptatum non reprehenderit nemo. Repudiandae accusantium sapiente cupiditate suscipit nisi?</p>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam dicta deleniti, ex hic eveniet rem eius minus id soluta voluptatum non reprehenderit nemo. Repudiandae accusantium sapiente cupiditate suscipit nisi?</p>
                             <button class="btn mt-3" data-ss-dismiss="sheet">Close</button>
                         </div>
                     </div>
@@ -471,7 +481,7 @@
                             <div class="dropdown-menu" id="myDropdown">
                                 <a href="#">Dropdown Item 1</a>
                                 <a href="#">Dropdown Item 2</a>
-                                <a href="#">Dropdown Item 3</a>
+                                <button disabled>Dropdown Item 3 (disabled)</button>
                                 <a href="#">Dropdown Item 4</a>
                                 <hr class="dropdown-separator">
                                 <a href="#">Dropdown Item 5</a>
@@ -485,7 +495,7 @@
                             <div class="dropdown-menu top" id="myDropdown2">
                                 <a href="#">Dropdown Item 1</a>
                                 <a href="#">Dropdown Item 2</a>
-                                <a href="#">Dropdown Item 3</a>
+                                <button disabled>Dropdown Item 3 (disabled)</button>
                                 <a href="#">Dropdown Item 4</a>
                                 <hr class="dropdown-separator">
                                 <a href="#">Dropdown Item 5</a>
@@ -508,8 +518,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-xl-6 mt-4">
+            <div class="row mt-4">
+                <div class="col-xl-6">
                     <h1>Drawer</h1>
 
                     <button class="btn btn-outline" data-ss-drawer="#myDrawer">Open Drawer</button>
@@ -519,10 +531,16 @@
                             <div class="drawer-handle"></div>
                             <h1 class="mb-0">This is a drawer.</h1>
                             <h3>You can drag it to close.</h3>
-                            <p class="text-secondary">Or you can also click the backdrop or in the button below:</p>
+                            <p class="text-secondary">Or you can also click the backdrop or in the button below.</p>
                             <button class="btn mt-3" data-ss-dismiss="drawer">Close</button>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-xl-6">
+                    <h1>Sidebar</h1>
+
+                    <a href="examples/sidebar.html" class="btn btn-outline" target="_blank">See Example</a>
                 </div>
             </div>
 
