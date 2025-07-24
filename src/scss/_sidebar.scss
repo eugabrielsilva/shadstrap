@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .sidebar-wrapper {
     overflow: hidden;
     width: 100dvw;
@@ -35,6 +37,51 @@
         color: hsl(var(--sidebar-foreground));
         z-index: 51;
         transform: translateX(-100%);
+
+        .menu-content {
+            display: flex;
+            flex-flow: column;
+            gap: 0.25rem;
+            flex: 1;
+            overflow: auto;
+            width: 100%;
+        }
+
+        .group-label {
+            font-size: 0.75rem;
+            line-height: calc(1 / 0.75);
+            padding-top: .5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-top: 20px;
+            font-weight: 500;
+            color: hsl(var(--sidebar-ring));
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .menu-header,
+        .menu-footer {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing) * 2);
+            width: 100%;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: calc(var(--radius) - 2px);
+            @include transitionColors();
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                background-color: hsl(var(--sidebar-accent));
+                color: hsl(var(--sidebar-accent-foreground));
+            }
+        }
     }
 
     .sidebar-content {
