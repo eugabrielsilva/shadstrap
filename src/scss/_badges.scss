@@ -52,6 +52,10 @@
         &:hover {
             opacity: 0.9;
         }
+
+        @media (prefers-color-scheme: light) {
+            color: hsl(var(--background));
+        }
     }
 
     &.badge-outline {

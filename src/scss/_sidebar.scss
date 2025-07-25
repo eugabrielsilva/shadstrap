@@ -1,8 +1,8 @@
 @use 'mixins' as *;
 
 .sidebar-wrapper {
-    overflow: hidden;
     width: 100dvw;
+    overflow-y: auto;
     height: 100dvh;
 
     .sidebar-backdrop {
@@ -93,7 +93,8 @@
             width: 100%;
             top: 0;
             border-bottom-width: 1px;
-            padding: 1rem;
+            padding: 0.75rem;
+            background-color: hsl(var(--background));
         }
     }
 

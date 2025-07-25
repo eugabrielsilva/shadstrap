@@ -69,6 +69,7 @@
             height: 0;
             color: inherit;
             border-top-width: 1px;
+            opacity: 1;
         }
 
         a,
@@ -93,7 +94,7 @@
             &:disabled,
             &.disabled {
                 opacity: 0.5;
-                cursor: not-allowed;
+                pointer-events: none;
             }
         }
     }

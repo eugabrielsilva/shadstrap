@@ -25,6 +25,7 @@
         flex: 1;
         overflow-x: auto;
         scrollbar-width: none;
+        color: inherit;
 
         &.no-wrap {
             white-space: nowrap;

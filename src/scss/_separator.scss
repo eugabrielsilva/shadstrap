@@ -5,11 +5,15 @@ hr.separator {
     height: 1px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    border: none;
+    opacity: 1;
 }
 
 .separator-vertical {
     background-color: hsl(var(--border));
     flex-shrink: 0;
+    border: none;
+    opacity: 1;
     width: 1px;
     margin-right: calc(1rem* var(--tw-space-x-reverse));
     margin-left: calc(1rem* calc(1 - var(--tw-space-x-reverse)));
