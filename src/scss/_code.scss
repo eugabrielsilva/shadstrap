@@ -5,22 +5,22 @@
     padding: .5rem;
     border-radius: calc(var(--radius) + 4px);
     background-color: hsl(var(--code));
-    font-family: "Geist Mono", monospace;
     max-width: 100%;
-
+    
     .btn-copy {
         background-color: hsl(var(--code));
         color: var(--bs-gray-400);
         box-shadow: none;
         padding: .7rem;
-
+        
         &:hover {
             background-color: hsl(var(--accent));
             color: hsl(var(--accent-foreground));
         }
     }
-
+    
     code {
+        font-family: "Geist Mono", monospace;
         padding: 0.7rem;
         flex: 1;
         overflow-x: auto;
