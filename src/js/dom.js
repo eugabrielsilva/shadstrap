@@ -107,10 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetEl = document.querySelector(el.getAttribute('data-ss-copy'));
             if(targetEl) {
+                const originalHtml = el.innerHTML;
                 navigator.clipboard.writeText(targetEl.innerHTML);
                 el.innerHTML = '<i class="fas fa-check"></i>';
                 setTimeout(() => {
-                    el.innerHTML = '<i class="far fa-clipboard"></i>';
+                    el.innerHTML = originalHtml;
                 }, 2000);
             }
         });

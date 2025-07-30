@@ -20,6 +20,7 @@
     text-align: left;
     font-family: 'Geist';
     font-weight: 500;
+    user-select: none;
 
     &.show {
         opacity: 1;

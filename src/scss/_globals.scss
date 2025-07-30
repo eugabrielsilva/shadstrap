@@ -6,6 +6,10 @@
     color-scheme: dark;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
+
+    @media (prefers-color-scheme: light) {
+        color-scheme: light;
+    }
 }
 
 * {
@@ -23,7 +27,7 @@ body {
     color: hsl(var(--foreground));
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
-    font-family: 'Geist';
+    font-family: 'Geist', sans-serif;
 }
 
 button,
