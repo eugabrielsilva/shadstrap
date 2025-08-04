@@ -3,6 +3,22 @@
   "version": "0.1.0",
   "description": "A CSS theme based on shadcn/ui look, with the benefits of Bootstrap utilities and FontAwesome icons.",
   "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "shadcn",
+    "css",
+    "theme",
+    "fontawesome",
+    "gulp"
+  ],
+  "bugs": {
+    "url": "https://github.com/eugabrielsilva/shadstrap/issues"
+  },
+  "homepage": "https://eugabrielsilva.github.io/shadstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eugabrielsilva/shadstrap.git"
+  },
   "author": {
     "name": "Gabriel Silva"
   },
