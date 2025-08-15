@@ -27,7 +27,10 @@ Includes all icons from the [FontAwesome 7 Free](https://fontawesome.com/v7/sear
 Add this inside the `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css"
+/>
 ```
 
 Add this before the closing `</body>` tag:
@@ -36,9 +39,29 @@ Add this before the closing `</body>` tag:
 <script src="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.js"></script>
 ```
 
+### NPM
+
+In your project folder, run:
+
+```shell
+npm install shadstrap
+```
+
+Add this inside the `<head>` tag:
+
+```html
+<link rel="stylesheet" href="./node_modules/shadstrap/dist/shadstrap.min.css" />
+```
+
+Add this before the closing `</body>` tag:
+
+```html
+<script src="./node_modules/shadstrap/dist/shadstrap.min.js"></script>
+```
+
 ### Manually
 
-Download the latest release files to your project folder.
+Download the latest [release files](https://github.com/eugabrielsilva/shadstrap/releases) to your project folder.
 
 Add this inside the `<head>` tag:
 
