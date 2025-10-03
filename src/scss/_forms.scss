@@ -84,6 +84,7 @@
             top: .75rem;
             right: .75rem;
             color: hsl(var(--muted-foreground));
+            pointer-events: none;
         }
 
         select {
