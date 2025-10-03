@@ -37,6 +37,7 @@ select {
 
 button,
 input,
+a,
 optgroup,
 select,
 textarea {
@@ -53,4 +54,8 @@ textarea {
     margin: 0;
     padding: 0;
     outline: none;
+
+    &:focus-visible {
+        outline: var(--focus-ring);
+    }
 }

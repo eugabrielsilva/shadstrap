@@ -26,10 +26,6 @@
         font-size: 0.875rem;
         line-height: 1.25rem;
 
-        &:focus {
-            border-color: hsl(var(--primary));
-        }
-
         &::placeholder {
             font-weight: 500;
             color: hsl(var(--muted-foreground));
@@ -179,10 +175,6 @@
         cursor: pointer;
         background: transparent;
         position: relative;
-
-        &:focus {
-            border-color: hsl(var(--primary));
-        }
 
         &:disabled,
         &.disabled {
