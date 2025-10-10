@@ -51,6 +51,12 @@
             transform-origin: bottom center;
         }
 
+        &.right {
+            left: auto;
+            right: 0;
+            transform-origin: top right;
+        }
+
         &.show {
             display: block;
             pointer-events: all;

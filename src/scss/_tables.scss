@@ -1,5 +1,9 @@
 @use 'mixins' as *;
 
+.table-responsive {
+    overflow-x: auto;
+}
+
 .table {
     border-collapse: collapse;
     font-size: 0.875rem;
