@@ -23,10 +23,6 @@
     @include transitionColors();
     height: 2.25rem;
 
-    &[data-ss-tooltip] {
-        position: relative;
-    }
-
     &:disabled,
     &.disabled {
         opacity: 0.5;

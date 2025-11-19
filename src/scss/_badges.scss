@@ -44,6 +44,22 @@
         }
     }
 
+    &.badge-success {
+        background-color: var(--bs-success);
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &.badge-warning {
+        background-color: var(--bs-warning);
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
     &.badge-blue {
         transition: opacity 0.15s;
         background-color: var(--bs-blue);

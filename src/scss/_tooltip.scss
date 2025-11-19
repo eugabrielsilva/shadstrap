@@ -1,3 +1,12 @@
+*[data-ss-tooltip] {
+    position: relative;
+    contain: layout;
+
+    &:has(.tooltip.show) {
+        z-index: 1;
+    }
+}
+
 .tooltip {
     position: absolute;
     left: 50%;

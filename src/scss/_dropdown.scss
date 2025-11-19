@@ -26,6 +26,11 @@
 
 .dropdown {
     position: relative;
+    contain: layout;
+
+    &:has(.dropdown-menu.show) {
+        z-index: 1;
+    }
 
     .dropdown-menu {
         position: absolute;

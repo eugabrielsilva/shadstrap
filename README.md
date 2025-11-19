@@ -27,10 +27,7 @@ Includes all icons from the [FontAwesome 7 Free](https://fontawesome.com/v7/sear
 Add this inside the `<head>` tag:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css"
-/>
+<link rel="stylesheet" href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css"/>
 ```
 
 Add this before the closing `</body>` tag:
@@ -50,7 +47,7 @@ npm install shadstrap
 Add this inside the `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="./node_modules/shadstrap/dist/shadstrap.min.css" />
+<link rel="stylesheet" href="./node_modules/shadstrap/dist/shadstrap.min.css"/>
 ```
 
 Add this before the closing `</body>` tag:
@@ -66,7 +63,7 @@ Download the latest [release files](https://github.com/eugabrielsilva/shadstrap/
 Add this inside the `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="/path/to/dist/shadstrap.min.css" />
+<link rel="stylesheet" href="/path/to/dist/shadstrap.min.css"/>
 ```
 
 Add this before the closing `</body>` tag:
@@ -74,3 +71,7 @@ Add this before the closing `</body>` tag:
 ```html
 <script src="/path/to/dist/shadstrap.min.js"></script>
 ```
+
+## Credits
+
+Shadstrap is developed and maintained by [Gabriel Silva](https://github.com/eugabrielsilva). This project is not affiliated with, endorsed by, or associated with shadcn/ui, Bootstrap, or Font Awesome.
