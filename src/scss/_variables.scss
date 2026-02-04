@@ -16,8 +16,9 @@
     --muted-foreground: 240 5% 64.9%;
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
+    --destructive: 357 100% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-alpha: 60%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --focus-ring: 1px solid hsl(var(--primary));
@@ -74,4 +75,6 @@
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
     --tracking-tight: -.025em;
+    --blue-badge-foreground: var(--foreground);
+    --color-scheme: dark;
 }

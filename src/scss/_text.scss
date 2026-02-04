@@ -49,7 +49,7 @@ h5 {
 h1 {
     text-wrap: balance;
     letter-spacing: var(--tracking-tight);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 2.25rem;
     line-height: calc(2.5/2.25);
 }
@@ -105,4 +105,16 @@ ol {
 
 ol {
     list-style-type: decimal;
+}
+
+pre {
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: calc(1.25 / .875);
+    font-family: "Geist Mono", monospace;
+    padding-block: .2rem;
+    padding-inline: .3rem;
+    background-color: hsl(var(--muted));
+    border-radius: .25rem;
+    display: inline-block;
 }

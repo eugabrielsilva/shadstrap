@@ -36,11 +36,11 @@
 
     &.badge-destructive,
     &.badge-danger {
-        background-color: hsl(var(--destructive));
+        background-color: hsl(var(--destructive) / var(--destructive-alpha, 1));
         color: hsl(var(--destructive-foreground));
 
         &:hover {
-            background-color: hsl(var(--destructive) / 0.9);
+            background-color: hsl(var(--destructive) / calc(var(--destructive-alpha, 1) * 0.9));
         }
     }
 
@@ -63,14 +63,10 @@
     &.badge-blue {
         transition: opacity 0.15s;
         background-color: var(--bs-blue);
-        color: hsl(var(--foreground));
+        color: hsl(var(--blue-badge-foreground));
 
         &:hover {
             opacity: 0.9;
-        }
-
-        @media (prefers-color-scheme: light) {
-            color: hsl(var(--background));
         }
     }
 
