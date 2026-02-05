@@ -23,6 +23,9 @@
     --sidebar-accent: 0 0.24% 96.06%;
     --sidebar-accent-foreground: 0 0.02% 9.06%;
     --sidebar-ring: 0 0% 41.09%;
+    --destructive-alpha: 90%;
+    --blue-badge-foreground: var(--background);
+    --color-scheme: light;
 }
 
 @media (prefers-color-scheme: light) {

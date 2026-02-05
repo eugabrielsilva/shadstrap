@@ -47,12 +47,12 @@
 
     &.btn-destructive,
     &.btn-danger {
-        background-color: hsl(var(--destructive));
+        background-color: hsl(var(--destructive) / var(--destructive-alpha, 1));
         color: hsl(var(--destructive-foreground));
 
         &:hover,
         &.active {
-            background-color: hsl(var(--destructive) / 0.9);
+            background-color: hsl(var(--destructive) / calc(var(--destructive-alpha, 1) * 0.9));
         }
     }
 

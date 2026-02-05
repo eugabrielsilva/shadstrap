@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark light">
-        <title>Shadstrap Demo</title>
+        <title>Shadstrap Sidebar Demo</title>
         <link rel="stylesheet" href="../dist/shadstrap.min.css">
     </head>
 
@@ -14,74 +14,91 @@
             <!-- Sidebar -->
             <div class="sidebar-menu">
                 <a href="../" class="menu-header">
-                    <img src="https://placehold.co/30" class="rounded">
-                    <div>
-                        <p class="m-0">Shadstrap</p>
-                        <p class="text-secondary m-0">Sidebar example</p>
-                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="!size-5"><circle cx="12" cy="12" r="9"></circle><path d="M16.243 7.757a6 6 0 0 0 -8.486 0"></path><path d="M10 8h3.2a2.3 2.3 0 0 1 0 4.6H10z"></path><path d="M10 12.6h3.6a2.4 2.4 0 0 1 0 4.8H10z"></path></svg>
+                    Shadstrap
                 </a>
 
                 <div class="menu-content">
                     <div class="group-label">Pages</div>
-                    <a href="#" class="btn btn-ghost btn-full active">
+                    <a href="#" class="btn btn-ghost btn-full active fw-normal">
                         <i class="far fa-house"></i>
                         Home
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-cloud"></i>
                         Cloud management
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-calendar-days"></i>
                         Agenda
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-star"></i>
                         Favorites
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-flag"></i>
                         Report bugs
                     </a>
 
                     <div class="group-label">Settings</div>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-envelope"></i>
                         E-mails
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-message"></i>
                         Chat
                     </a>
-                    <a href="#" class="btn btn-ghost btn-full">
+                    <a href="#" class="btn btn-ghost btn-full fw-normal">
                         <i class="far fa-note-sticky"></i>
                         My notes
                     </a>
                 </div>
+                <div class="group-label">Support</div>
+                <a href="#" class="btn btn-ghost btn-full fw-normal">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+                <a href="#" class="btn btn-ghost btn-full fw-normal">
+                    <i class="far fa-circle-question"></i>
+                    Get Help
+                </a>
             </div>
 
             <!-- Content wrapper -->
             <div class="sidebar-content">
                 <!-- Header -->
-                <div class="sidebar-header">
+                <div class="sidebar-header d-flex px-4">
                     <!-- Toggle button -->
-                    <button class="btn btn-ghost" data-ss-sidebar="#mySidebar" data-ss-tooltip="Toggle sidebar" data-ss-placement="right">
-                        <i class="fas fa-mattress-pillow"></i>
-                    </button>
+                    <div class="me-2 d-flex align-items-center">
+                        <button class="btn btn-ghost d-block px-2" data-ss-sidebar="#mySidebar" data-ss-tooltip="Toggle sidebar" data-ss-placement="right">
+                            <i class="fas fa-mattress-pillow"></i>
+                        </button>
+                    </div>
+                    <div class="w-100 pt-2">
+                        <div class="border-start px-3">
+                            <div class="breadcrumb d-none d-md-block">
+                                <a href="#"><h6 class="m-0">Overview</h6></a>
+                                <a href="#"><h6 class="m-0">Documents</h6></a>
+                            </div>
+                            <div class="d-md-none">
+                                <h6 class="m-0">Documents</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Inner content -->
-                <div class="p-5">
-                    <div class="container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed arcu turpis. Donec mattis dignissim dignissim. Nulla tincidunt diam id pharetra efficitur. Morbi vehicula dolor eget nulla pulvinar fringilla. Aenean a dolor sodales, dignissim sem vitae, hendrerit nisi. Curabitur sit amet odio eu nibh tincidunt dictum. Sed in turpis elit. Morbi quam dui, finibus ac nisl sit amet, imperdiet fringilla quam. Ut eu tempor tortor, et volutpat quam. Duis porta laoreet commodo. Vivamus at commodo erat, tincidunt dictum neque. Vivamus ligula velit, vulputate eu tempor eu, dignissim quis lorem. Praesent id euismod nunc.</p>
-
-                        <p>Morbi eu velit ut velit imperdiet placerat. Nunc vehicula consequat arcu eget rhoncus. In hac habitasse platea dictumst. Donec consectetur felis nisl. Sed erat metus, cursus eu fermentum id, gravida ut dolor. Praesent ultrices, tortor sed egestas porta, tortor eros gravida mauris, at mattis nunc magna ut lectus. Nullam et risus mauris. Nunc ornare magna massa, ac molestie mauris pharetra vitae. Praesent id sapien nec purus rhoncus mollis. Proin leo tortor, volutpat quis interdum vel, varius id est. Integer sollicitudin massa vitae dui malesuada, ac sodales urna aliquam. Vestibulum id massa sodales, ornare diam nec, malesuada mauris. Curabitur a risus ut velit vulputate sodales. Donec placerat congue lobortis. Suspendisse potenti. Phasellus porta, magna a mattis sodales, purus diam aliquam massa, quis ullamcorper augue quam in ex.</p>
-
-                        <p>Donec a justo quis eros euismod ultricies. Proin ultrices tellus quis neque vulputate mattis. Sed consectetur metus vel nunc lacinia hendrerit. Nunc congue ut odio et dictum. Quisque porttitor tempus dictum. Curabitur ultricies luctus aliquet. Nunc odio enim, vehicula eu urna ac, dictum rutrum leo. Aliquam blandit suscipit libero, id tristique eros. Etiam vehicula leo vel pellentesque maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-                        <p>Fusce iaculis sapien nec leo commodo tempus. Cras eu laoreet ante, in ultrices quam. Aliquam erat volutpat. Vestibulum eu ultricies nisi. Nunc eget dictum massa. Quisque a quam eget dui ullamcorper aliquam. In lacinia maximus tortor, in imperdiet neque viverra nec.</p>
-
-                        <p>Morbi in lectus rutrum, dapibus odio nec, consequat est. Pellentesque pellentesque ornare risus, nec iaculis nunc auctor sed. Vestibulum venenatis arcu quis metus vehicula vulputate. Suspendisse at augue elit. Quisque ac velit feugiat, dignissim metus sagittis, ullamcorper tellus. Pellentesque iaculis, eros ut porttitor maximus, est neque sagittis urna, vitae pellentesque nibh ligula vel metus. Vivamus purus ex, pretium id aliquet in, semper a tortor. Proin lacinia nunc non lobortis ultrices.</p>
+                <div class="p-3">
+                    <div class="container-fluid">
+                        <div class="card mb-3">
+                            <h6 class="card-header m-0">Payment Method</h6>
+                            <p class="text-secondary">All transactions are secure and encrypted</p>
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
