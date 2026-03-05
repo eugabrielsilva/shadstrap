@@ -5,6 +5,7 @@ window.shadstrap = {
     closeDropdowns() {
         document.querySelectorAll('.dropdown .dropdown-menu.show').forEach(el => {
             el.classList.remove('show');
+            el.dispatchEvent(new CustomEvent('ss.dropdown.close'));
         });
     },
 
@@ -17,15 +18,12 @@ window.shadstrap = {
         backdrop.className = 'dialog-backdrop';
         backdrop.addEventListener('click', (e) => {
             e.preventDefault();
-            targetEl.classList.remove('show');
-            setTimeout(() => {
-                backdrop.remove();
-            }, 500);
-            document.body.classList.remove('no-scroll');
+            window.shadstrap.closeDialog(null, targetEl);
         });
         targetEl.appendChild(backdrop);
         targetEl.classList.add('show');
         document.body.classList.add('no-scroll');
+        targetEl.dispatchEvent(new CustomEvent('ss.dialog.show'));
     },
 
     // Close dialog
@@ -41,6 +39,7 @@ window.shadstrap = {
             }, 500);
         }
         document.body.classList.remove('no-scroll');
+        targetEl.dispatchEvent(new CustomEvent('ss.dialog.close'));
     },
 
     // Open sheet
@@ -52,12 +51,7 @@ window.shadstrap = {
         backdrop.className = 'sheet-backdrop';
         backdrop.addEventListener('click', (e) => {
             e.preventDefault();
-            targetEl.classList.remove('show');
-            backdrop.classList.remove('show');
-            setTimeout(() => {
-                backdrop.remove();
-            }, 250);
-            document.body.classList.remove('no-scroll');
+            window.shadstrap.closeSheet(null, targetEl);
         });
         targetEl.appendChild(backdrop);
         targetEl.classList.add('show');
@@ -65,6 +59,7 @@ window.shadstrap = {
         setTimeout(() => {
             backdrop.classList.add('show');
         }, 0);
+        targetEl.dispatchEvent(new CustomEvent('ss.sheet.open'));
     },
 
     // Close sheet
@@ -81,6 +76,7 @@ window.shadstrap = {
             }, 250);
         }
         document.body.classList.remove('no-scroll');
+        targetEl.dispatchEvent(new CustomEvent('ss.sheet.close'));
     },
 
     // Open drawer
@@ -92,12 +88,7 @@ window.shadstrap = {
         backdrop.className = 'drawer-backdrop';
         backdrop.addEventListener('click', (e) => {
             e.preventDefault();
-            targetEl.classList.remove('show');
-            backdrop.classList.remove('show');
-            setTimeout(() => {
-                backdrop.remove();
-            }, 250);
-            document.body.classList.remove('no-scroll');
+            window.shadstrap.closeDrawer(null, targetEl);
         });
         targetEl.appendChild(backdrop);
         targetEl.classList.add('show');
@@ -105,6 +96,7 @@ window.shadstrap = {
         setTimeout(() => {
             backdrop.classList.add('show');
         }, 0);
+        targetEl.dispatchEvent(new CustomEvent('ss.drawer.open'));
     },
 
     // Close drawer
@@ -121,6 +113,7 @@ window.shadstrap = {
             }, 250);
         }
         document.body.classList.remove('no-scroll');
+        targetEl.dispatchEvent(new CustomEvent('ss.drawer.close'));
     },
 
     // Toggle sidebar
@@ -128,5 +121,6 @@ window.shadstrap = {
         if(!targetEl && selector) targetEl = document.querySelector(selector);
         if(!targetEl) throw new Error(`${selector} element was not found`);
         targetEl.classList.toggle('show');
+        targetEl.dispatchEvent(new CustomEvent('ss.sidebar.toggle'));
     },
 }

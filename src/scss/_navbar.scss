@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+
+    .nav-item {
+        position: relative;
+
+        .nav-submenu {
+            position: absolute;
+            left: 0;
+        }
+    }
+}

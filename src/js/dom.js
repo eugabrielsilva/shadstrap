@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(targetEl) {
                 targetEl.classList.toggle('show');
                 el.classList.toggle('open');
+                targetEl.dispatchEvent(new CustomEvent('ss.accordion.toggle'));
             }
         });
     });
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 el.classList.add('active');
                 targetEl.classList.add('show');
+                targetEl.dispatchEvent(new CustomEvent('ss.tab.show'));
             }
         });
     });
@@ -88,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.shadstrap.closeDropdowns();
                 }
                 targetEl.classList.toggle('show');
+                targetEl.dispatchEvent(new CustomEvent('ss.dropdown.show'));
             }
         })
     });
