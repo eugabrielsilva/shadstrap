@@ -24,8 +24,8 @@ function styles() {
 }
 
 function watchFiles() {
-    watch('src/js/*.js', {ignoreInitial: false}, scripts);
-    watch('src/scss/*.scss', {ignoreInitial: false}, styles);
+    gulp.watch('src/js/*.js', {ignoreInitial: false}, scripts);
+    gulp.watch('src/scss/*.scss', {ignoreInitial: false}, styles);
 }
 
 exports.default = gulp.parallel(scripts, styles);

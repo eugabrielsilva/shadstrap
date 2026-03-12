@@ -23,6 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Close elements on Escape key
+    window.addEventListener('keydown', (event) => {
+        if(event.key === 'Escape') {
+            document.querySelectorAll('.dialog.show:not(.dialog-alert)').forEach(el => {
+                window.shadstrap.closeDialog(null, el);
+            });
+
+            document.querySelectorAll('.drawer.show').forEach(el => {
+                window.shadstrap.closeDrawer(null, el);
+            });
+
+            document.querySelectorAll('.sheet.show').forEach(el => {
+                window.shadstrap.closeSheet(null, el);
+            });
+            
+            window.shadstrap.closeDropdowns();
+        }
+    });
+
     // Accordion triggers
     document.querySelectorAll('[data-ss-accordion]').forEach(el => {
         el.addEventListener('click', (e) => {
@@ -82,24 +101,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dropdown triggers
     document.querySelectorAll('[data-ss-dropdown]').forEach(el => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetEl = document.querySelector(el.getAttribute('data-ss-dropdown'));
-            if(targetEl) {
-                if(!targetEl.classList.contains('show')) {
-                    window.shadstrap.closeDropdowns();
+        const targetEl = document.querySelector(el.getAttribute('data-ss-dropdown'));
+        if(targetEl) {
+            targetEl.triggerEl = el;
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if(targetEl.classList.contains('show')) {
+                    targetEl.classList.remove('show');
+                    return;
                 }
-                targetEl.classList.toggle('show');
-                targetEl.dispatchEvent(new CustomEvent('ss.dropdown.show'));
-            }
-        })
+                window.shadstrap.closeDropdowns();
+                window.shadstrap.showDropdown(null, targetEl);
+            });
+        }
     });
+
+    // Watch scroll to reposition fixed elements
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+            window.shadstrap.showDropdown(null, menu);
+        });
+    }, true);
+
+    // Watch resize to reposition fixed elements
+    window.addEventListener('resize', () => {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+            window.shadstrap.showDropdown(null, menu);
+        });
+    }, true);
 
     // Close dropdowns by clicking outside
     document.addEventListener('click', e => {
-        const isDropdown = e.target.closest('.dropdown');
-        const isToggle = e.target.closest('[data-ss-dropdown]');
-        if(!isDropdown && !isToggle) {
+        if(!e.target.closest('.dropdown')) {
             window.shadstrap.closeDropdowns();
         }
     });

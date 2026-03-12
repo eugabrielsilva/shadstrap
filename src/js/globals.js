@@ -1,6 +1,36 @@
 // Global methods
 window.shadstrap = {
 
+    // Show dropdown
+    showDropdown(selector, targetEl = null) {
+        if(!targetEl && selector) targetEl = document.querySelector(selector);
+        if(!targetEl) throw new Error(`${selector} element was not found`);
+        if(!targetEl.triggerEl) throw new Error(`${selector} element trigger was not found`);
+
+        targetEl.style.top = '';
+        targetEl.style.bottom = '';
+        targetEl.style.left = '';
+        targetEl.style.right = '';
+        targetEl.classList.add('show');
+
+        const triggerRect = targetEl.triggerEl.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        if(targetEl.classList.contains('top')) {
+            targetEl.style.bottom = `${viewportHeight - triggerRect.top}px`;
+            targetEl.style.left = `${triggerRect.left}px`;
+        } else if(targetEl.classList.contains('right')) {
+            targetEl.style.top = `${triggerRect.bottom}px`;
+            targetEl.style.right = `${viewportWidth - triggerRect.right}px`;
+        } else {
+            targetEl.style.top = `${triggerRect.bottom}px`;
+            targetEl.style.left = `${triggerRect.left}px`;
+        }
+
+        targetEl.dispatchEvent(new CustomEvent('ss.dropdown.show'));
+    },
+
     // Close all dropdowns
     closeDropdowns() {
         document.querySelectorAll('.dropdown .dropdown-menu.show').forEach(el => {

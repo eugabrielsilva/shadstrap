@@ -26,16 +26,14 @@
 
 .dropdown {
     position: relative;
-    contain: layout;
 
     &:has(.dropdown-menu.show) {
         z-index: 1;
     }
 
     .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        margin: 0;
         display: none;
         background-color: hsl(var(--popover));
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -51,14 +49,10 @@
         opacity: 0;
 
         &.top {
-            top: auto;
-            bottom: 100%;
             transform-origin: bottom center;
         }
 
         &.right {
-            left: auto;
-            right: 0;
             transform-origin: top right;
         }
 

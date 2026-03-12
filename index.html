@@ -364,7 +364,7 @@
                     <div id="defaultDialog" class="dialog">
                         <div class="dialog-content">
                             <h3 class="mt-0">Hello, world!</h3>
-                            <p class="text-secondary">This is a simple dialog. You can close it by clicking outside or in the button below.</p>
+                            <p class="text-secondary">This is a simple dialog. You can close it by clicking outside or in the button below. You can also close by pressing the Escape key.</p>
                             <div class="text-end mt-3">
                                 <button class="btn" data-ss-dismiss="dialog">Close</button>
                             </div>
@@ -385,7 +385,7 @@
                     <div id="alertDialog" class="dialog dialog-alert">
                         <div class="dialog-content">
                             <h3 class="mt-0">Are you sure?</h3>
-                            <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside.</p>
+                            <p class="text-secondary">This a dialog that cannot be dismissed by clicking outside or pressing the Escape key.</p>
                             <div class="flex justify-content-end mt-3">
                                 <button class="btn btn-outline" data-ss-dismiss="dialog">Cancel</button>
                                 <button class="btn btn-destructive" data-ss-dismiss="dialog">Continue</button>
@@ -438,7 +438,7 @@
                     <div id="defaultSheet" class="sheet">
                         <div class="sheet-content">
                             <h3>This is a sheet.</h3>
-                            <p class="text-secondary">You can close it by clicking outside or in the button below.</p>
+                            <p class="text-secondary">You can close it by clicking outside or in the button below. You can also close by pressing the Escape key.</p>
                             <button class="btn mt-3" data-ss-dismiss="sheet">Close</button>
                         </div>
                     </div>
@@ -484,16 +484,18 @@
 
                     <div class="flex">
                         <!-- Default position -->
-                        <div class="dropdown">
-                            <button data-ss-dropdown="#myDropdown" class="btn">Open Dropdown (default)</button>
-                            <div class="dropdown-menu" id="myDropdown">
-                                <a href="#">Dropdown Item 1</a>
-                                <a href="#">Dropdown Item 2</a>
-                                <button disabled>Dropdown Item 3 (disabled)</button>
-                                <a href="#">Dropdown Item 4</a>
-                                <hr class="dropdown-separator">
-                                <a href="#">Dropdown Item 5</a>
-                                <a href="#">Dropdown Item 6</a>
+                        <div class="table-responsive">
+                            <div class="dropdown">
+                                <button data-ss-dropdown="#myDropdown" class="btn">Open Dropdown (default)</button>
+                                <div class="dropdown-menu" id="myDropdown">
+                                    <a href="#">Dropdown Item 1</a>
+                                    <a href="#">Dropdown Item 2</a>
+                                    <button disabled>Dropdown Item 3 (disabled)</button>
+                                    <a href="#">Dropdown Item 4</a>
+                                    <hr class="dropdown-separator">
+                                    <a href="#">Dropdown Item 5</a>
+                                    <a href="#">Dropdown Item 6</a>
+                                </div>
                             </div>
                         </div>
 
@@ -563,37 +565,6 @@
                     <h1>Sidebar</h1>
 
                     <a href="examples/sidebar.html" class="btn btn-outline" target="_blank">See Example</a>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-xl-6 mt-4">
-                    <h1>Navbar</h1>
-                    <div class="navbar">
-                        <div class="nav-item">
-                            <a href="" class="btn btn-ghost">
-                                Getting started
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="nav-submenu">
-                                <a href="">
-                                    <h6 class="m-0">Introduction</h6>
-                                    <p class="text-muted mb-0">Description of the menu here.</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="" class="btn btn-ghost">
-                                Components
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="" class="btn btn-ghost">
-                                Docs
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
