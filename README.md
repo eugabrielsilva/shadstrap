@@ -22,18 +22,18 @@ Includes all icons from the [FontAwesome 7 Free](https://fontawesome.com/v7/sear
 
 ## Installation
 
-### GitHub CDN
+### CDN
 
 Add this inside the `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shadstrap@latest/dist/shadstrap.min.css"/>
 ```
 
 Add this before the closing `</body>` tag:
 
 ```html
-<script src="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shadstrap@latest/dist/shadstrap.min.js"></script>
 ```
 
 ### NPM
