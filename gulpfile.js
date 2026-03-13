@@ -3,7 +3,6 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
-const watch = require('gulp-watch');
 
 function scripts() {
     return gulp.src([
@@ -24,8 +23,8 @@ function styles() {
 }
 
 function watchFiles() {
-    gulp.watch('src/js/*.js', {ignoreInitial: false}, scripts);
-    gulp.watch('src/scss/*.scss', {ignoreInitial: false}, styles);
+    gulp.watch('src/js/*.js', {ignoreInitial: false}, gulp.series(scripts));
+    gulp.watch('src/scss/*.scss', {ignoreInitial: false}, gulp.series(styles));
 }
 
 exports.default = gulp.parallel(scripts, styles);
