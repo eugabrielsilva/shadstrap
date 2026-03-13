@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize sidebars
     window.shadstrap.initSidebars();
+    
+    // Initialize toasts
+    window.shadstrap.initToasts();
 
     // Close elements on Escape key
     window.addEventListener('keydown', (event) => {

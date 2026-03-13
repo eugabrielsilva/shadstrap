@@ -329,6 +329,73 @@ window.shadstrap = {
         });
     },
 
+    // Initialize toasts
+    initToasts() {
+        document.querySelectorAll('[data-ss-toast]:not(.ss-init)').forEach(el => {
+            el.classList.add('ss-init');
+
+            el.addEventListener('click', e => {
+                e.preventDefault();
+
+                const text = el.getAttribute('data-ss-toast');
+                const type = el.getAttribute('data-ss-type') || 'default';
+                const timeout = el.getAttribute('data-ss-timeout') || 3000;
+                const dismiss = el.hasAttribute('data-ss-dismiss');
+
+                window.shadstrap.showToast(text, type, timeout, dismiss);
+            });
+        });
+    },
+
+    // Show toast
+    showToast(text, type = 'default', timeout = 3000, dismiss = false) {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+
+        let html = '';
+
+        if(type === 'error') {
+            html += '<i class="fas fa-circle-xmark"></i>';
+        } else if(type === 'success') {
+            html += '<i class="fas fa-check-circle"></i>';
+        }
+
+        html += `<span class="toast-text">${text}</span>`;
+
+        if(dismiss) {
+            html += '<button type="button" class="toast-close"><i class="fa fa-times"></i></button>';
+        }
+
+        toast.innerHTML = html;
+
+        document.body.appendChild(toast);
+
+        if(dismiss) {
+            toast.querySelector('.toast-close').addEventListener('click', e => {
+                e.preventDefault();
+                toast.classList.remove('show');
+
+                setTimeout(() => {
+                    toast.remove();
+                }, 1000);
+            });
+        }
+
+        setTimeout(() => {
+            toast.classList.add('show');
+
+            if(timeout > 0) {
+                setTimeout(() => {
+                    toast.classList.remove('show');
+
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 1000);
+                }, timeout);
+            }
+        }, 0);
+    },
+
     // Show dropdown
     showDropdown(selector, targetEl = null) {
         if(!targetEl && selector) targetEl = document.querySelector(selector);
