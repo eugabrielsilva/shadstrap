@@ -63,9 +63,21 @@
             opacity 0.25s ease-out;
     }
 
+    &.dialog-md {
+        .dialog-content {
+            max-width: 800px;
+        }
+    }
+
     &.dialog-lg {
         .dialog-content {
             max-width: 1200px;
+        }
+    }
+
+    &.dialog-xl {
+        .dialog-content {
+            max-width: 1400px;
         }
     }
 }

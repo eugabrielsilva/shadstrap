@@ -299,9 +299,7 @@ window.shadstrap = {
 
     // Initialize sidebars
     initSidebars() {
-        document.querySelectorAll('[data-ss-sidebar]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
-
+        document.querySelectorAll('[data-ss-sidebar]').forEach(el => {
             el.addEventListener('click', e => {
                 e.preventDefault();
 
