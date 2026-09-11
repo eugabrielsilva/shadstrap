@@ -28,18 +28,20 @@
                 transition-timing-function: var(--ease);
                 color: hsl(var(--muted-foreground));
             }
-
-            &.open {
-                &:after {
-                    transform: rotate(180deg);
-                }
-            }
         }
 
         .accordion-content {
             display: none;
+        }
 
-            &.show {
+        &.show {
+            .accordion-toggle {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .accordion-content {
                 display: block;
                 padding-top: 1rem;
             }

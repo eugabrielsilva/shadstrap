@@ -3,8 +3,8 @@ window.shadstrap = {
 
     // Initialize dialogs
     initDialogs() {
-        document.querySelectorAll('[data-ss-dialog]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-dialog]:not(.ss-init-dialog)').forEach(el => {
+            el.classList.add('ss-init-dialog');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -18,8 +18,8 @@ window.shadstrap = {
         });
 
         // Close dialog buttons
-        document.querySelectorAll('[data-ss-dismiss="dialog"]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-dismiss="dialog"]:not(.ss-init-dialog)').forEach(el => {
+            el.classList.add('ss-init-dialog');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -35,8 +35,8 @@ window.shadstrap = {
 
     // Initialize accordions
     initAccordions() {
-        document.querySelectorAll('[data-ss-accordion]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-accordion]:not(.ss-init-accordion)').forEach(el => {
+            el.classList.add('ss-init-accordion');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -45,18 +45,35 @@ window.shadstrap = {
                 const targetEl = document.querySelector(selector);
 
                 if(targetEl) {
-                    targetEl.classList.toggle('show');
-                    el.classList.toggle('open');
-                    targetEl.dispatchEvent(new CustomEvent('ss.accordion.toggle'));
+                    const parentEl = targetEl.closest('.accordion-item');
+
+                    if(parentEl) {
+                        const groupEl = parentEl.closest('.accordion');
+                        window.shadstrap.closeAccordions(groupEl, parentEl);
+                        parentEl.classList.toggle('show');
+                        targetEl.dispatchEvent(new CustomEvent('ss.accordion.toggle'));
+                    }
                 }
             });
         });
     },
 
+    // Close accordions
+    closeAccordions(groupEl, parentEl = null) {
+        if(groupEl) {
+            const accordions = groupEl.querySelectorAll('.accordion-item.show');
+            accordions.forEach(accordion => {
+                if(accordion !== parentEl) {
+                    accordion.classList.remove('show');
+                }
+            });
+        }
+    },
+
     // Initialize sheets
     initSheets() {
-        document.querySelectorAll('[data-ss-sheet]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-sheet]:not(.ss-init-sheet)').forEach(el => {
+            el.classList.add('ss-init-sheet');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -70,8 +87,8 @@ window.shadstrap = {
         });
 
         // Close sheet buttons
-        document.querySelectorAll('[data-ss-dismiss="sheet"]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-dismiss="sheet"]:not(.ss-init-sheet)').forEach(el => {
+            el.classList.add('ss-init-sheet');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -87,8 +104,8 @@ window.shadstrap = {
 
     // Initialize dropdowns
     initDropdowns() {
-        document.querySelectorAll('[data-ss-dropdown]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-dropdown]:not(.ss-init-dropdown)').forEach(el => {
+            el.classList.add('ss-init-dropdown');
 
             const selector = el.getAttribute('data-ss-dropdown');
             const targetEl = document.querySelector(selector);
@@ -113,8 +130,8 @@ window.shadstrap = {
 
     // Initialize tabs
     initTabs() {
-        document.querySelectorAll('[data-ss-tab]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-tab]:not(.ss-init-tabs)').forEach(el => {
+            el.classList.add('ss-init-tabs');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -145,8 +162,8 @@ window.shadstrap = {
 
     // Initialize copy buttons
     initCopyButtons() {
-        document.querySelectorAll('[data-ss-copy]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-copy]:not(.ss-init-copy)').forEach(el => {
+            el.classList.add('ss-init-copy');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -171,8 +188,8 @@ window.shadstrap = {
 
     // Initialize ranges
     initRanges() {
-        document.querySelectorAll('.form input[type="range"]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('.form input[type="range"]:not(.ss-init-range)').forEach(el => {
+            el.classList.add('ss-init-range');
 
             el.addEventListener('input', () => {
                 const min = parseFloat(el.min || 0);
@@ -186,8 +203,8 @@ window.shadstrap = {
 
     // Initialize tooltips
     initTooltips() {
-        document.querySelectorAll('[data-ss-tooltip]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-tooltip]:not(.ss-init-tooltip)').forEach(el => {
+            el.classList.add('ss-init-tooltip');
 
             const placement = el.getAttribute('data-ss-placement') || 'top';
 
@@ -210,8 +227,8 @@ window.shadstrap = {
 
     // Initialize drawers
     initDrawers() {
-        document.querySelectorAll('[data-ss-drawer]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-drawer]:not(.ss-init-drawer)').forEach(el => {
+            el.classList.add('ss-init-drawer');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -225,8 +242,8 @@ window.shadstrap = {
         });
 
         // Drawer close buttons
-        document.querySelectorAll('[data-ss-dismiss="drawer"]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-dismiss="drawer"]:not(.ss-init-drawer)').forEach(el => {
+            el.classList.add('ss-init-drawer');
 
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -240,8 +257,8 @@ window.shadstrap = {
         });
 
         // Drawer drag events
-        document.querySelectorAll('.drawer:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('.drawer:not(.ss-init-drawer)').forEach(el => {
+            el.classList.add('ss-init-drawer');
 
             const drawerContent = el.querySelector('.drawer-content');
 
@@ -312,8 +329,8 @@ window.shadstrap = {
         });
 
         // Sidebar backdrops
-        document.querySelectorAll('.sidebar-wrapper:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('.sidebar-wrapper:not(.ss-init-wrapper)').forEach(el => {
+            el.classList.add('ss-init-wrapper');
 
             const backdrop = document.createElement('div');
             backdrop.className = 'sidebar-backdrop';
@@ -329,8 +346,8 @@ window.shadstrap = {
 
     // Initialize toasts
     initToasts() {
-        document.querySelectorAll('[data-ss-toast]:not(.ss-init)').forEach(el => {
-            el.classList.add('ss-init');
+        document.querySelectorAll('[data-ss-toast]:not(.ss-init-toast)').forEach(el => {
+            el.classList.add('ss-init-toast');
 
             el.addEventListener('click', e => {
                 e.preventDefault();

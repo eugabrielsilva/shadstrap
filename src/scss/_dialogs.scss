@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 50;
+    z-index: 60;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease-in-out;
@@ -52,7 +52,7 @@
         overflow-y: auto;
         background-color: hsl(var(--background));
         border-width: 1px;
-        z-index: 51;
+        z-index: 61;
         border-radius: var(--radius);
         width: 100%;
         max-width: 500px;
